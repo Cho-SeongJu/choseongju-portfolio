@@ -1,9 +1,20 @@
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 @import "tailwindcss";
 
+/* Chrome, Safari, Opera, Edge */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* IE, Firefox */
+html {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+
 @theme {
   /* Font */
-  --font-helvetica-neue: "Helvetica Neue", sans-serif;
+  --font-title: "Helvetica Neue", sans-serif;
 
   /* Color */
   /* black */
@@ -20,4 +31,12 @@
   --color-white-003: rgba(255, 255, 255, 0.9);
   --color-white-004: rgba(255, 255, 255, 0.85);
   --color-white-005: rgba(255, 255, 255, 0.8);
+
+  --tracking-1: 1%;
+
+  --leading-130: 130%;
+}
+
+.title {
+  font-family: "Helvetica Neue", sans-serif;
 }
