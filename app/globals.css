@@ -37,6 +37,7 @@ html {
   --leading-130: 130%;
 }
 
-.title {
+.font-title {
   font-family: "Helvetica Neue", sans-serif;
+  font-weight: 400;
 }
