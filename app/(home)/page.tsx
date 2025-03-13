@@ -1,7 +1,8 @@
 "use client";
 
-import Header from "@/components/header";
+import Header from "@/app/(home)/header";
 import { useEffect, useState } from "react";
+import AboutMe from "./about-me";
 
 export default function Home() {
   const [step, setStep] = useState<number>(1);
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <>
       <Header step={step} />
+      {step === 2 && <AboutMe />}
     </>
   );
 }

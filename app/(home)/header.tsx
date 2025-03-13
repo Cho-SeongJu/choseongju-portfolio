@@ -1,4 +1,4 @@
-import LinkIcon from "./icon/link_icon";
+import LinkIcon from "@/components/icon/link_icon";
 
 interface IHeaderProps {
   readonly step: number;
@@ -31,7 +31,7 @@ const MENU: IMenu = {
 
 export default function Header({ step }: IHeaderProps) {
   return (
-    <header className="sticky top-0">
+    <header className="fixed top-0 w-full">
       <div
         className={`items-center flex justify-evenly w-full h-[80px] mx-auto ${
           step === 1 ? "translate-y-[-80px]" : "translate-y-0"
@@ -87,14 +87,14 @@ export default function Header({ step }: IHeaderProps) {
           <span
             className={`${
               step === 1 ? "text-[110px]" : "text-[14.54px]"
-            } inline-block leading-[1.3] align-middle tracking-1 intro-animation`}
+            } inline-block align-middle tracking-1 intro-animation`}
           >
             Front-End Developer
           </span>
           <span
             className={`${
               step === 1 ? "mt-[30px] text-[200px]" : "text-[22.37px]"
-            } inline-block leading-[1.3] align-middle tracking-1 intro-animation`}
+            } inline-block align-middle tracking-1 intro-animation`}
           >
             Cho Seong Ju
           </span>
