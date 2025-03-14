@@ -22,7 +22,7 @@ export default function Experience2024() {
           2024
         </h3>
         <div className="w-[878px] py-[30px]">
-          <h4 className="text-white-002 font-bold text-[30px]">
+          <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
             키클롭스(CYCLOPS)
           </h4>
           <div className="flex justify-between text-[24px]">
