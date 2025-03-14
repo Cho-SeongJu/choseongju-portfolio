@@ -52,6 +52,18 @@ html {
   transition-timing-function: ease-in;
 }
 
+.about-me-border {
+  border: 1px solid
+    linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.8) 53.5%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+  border-radius: 20px;
+  box-shadow: 0px 1px 6px 0px rgba(255, 255, 255, 0.28) inset;
+}
+
 @keyframes fade-up-animation {
   from {
     opacity: 0;
@@ -107,4 +119,21 @@ html {
   animation-timing-function: ease-in-out;
   animation-name: pulse;
   animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+.marquee {
+  animation-name: marquee;
+  animation-iteration-count: infinite;
+  animation-duration: 6000ms;
+  animation-timing-function: linear;
 }
