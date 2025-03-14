@@ -4,9 +4,10 @@ import Header from "@/app/(home)/header";
 import { useEffect, useState } from "react";
 import AboutMe from "./about-me";
 import AboutMeDeveloper from "./about-me-developer";
+import Experience2024 from "./experience-2024";
 
 export default function Home() {
-  const [step, setStep] = useState<number>(3);
+  const [step, setStep] = useState<number>(4);
 
   const handleChangeSectionStep = (type: "prev" | "next") => {
     if (type === "prev") {
@@ -44,6 +45,7 @@ export default function Home() {
       <Header step={step} />
       {step === 2 && <AboutMe />}
       {step === 3 && <AboutMeDeveloper />}
+      {step === 4 && <Experience2024 />}
     </>
   );
 }
