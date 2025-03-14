@@ -31,7 +31,7 @@ const MENU: IMenu = {
 
 export default function Header({ step }: IHeaderProps) {
   return (
-    <header className="fixed top-0 w-full">
+    <header className="sticky top-0 w-full">
       <div
         className={`items-center flex justify-evenly w-full h-[80px] mx-auto ${
           step === 1 ? "translate-y-[-80px]" : "translate-y-0"

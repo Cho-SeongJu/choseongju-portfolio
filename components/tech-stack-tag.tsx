@@ -13,7 +13,7 @@ export default function TechStackTag({
         isNotLastIndex && "mr-[14px]"
       }`}
     >
-      <span className="text-white-002">{text}</span>
+      <span className="text-white-002 text-[14px] font-medium">{text}</span>
     </div>
   );
 }
