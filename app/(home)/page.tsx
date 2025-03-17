@@ -7,9 +7,10 @@ import AboutMeDeveloper from "./about-me/about-me-developer";
 import Experience2024 from "./experience/experience-2024";
 import Experience2022 from "./experience/experience-2022";
 import Experience2021 from "./experience/experience-2021";
+import TechStack from "./tech-stack/tech-stack";
 
 export default function Home() {
-  const [step, setStep] = useState<number>(6);
+  const [step, setStep] = useState<number>(7);
 
   const components: { [key: number]: JSX.Element } = useMemo(() => {
     return {
@@ -18,6 +19,7 @@ export default function Home() {
       4: <Experience2024 />,
       5: <Experience2022 />,
       6: <Experience2021 />,
+      7: <TechStack />,
     };
   }, []);
 

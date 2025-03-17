@@ -23,6 +23,7 @@ html {
   /* black */
   --color-black-001: #0f0f0f;
   --color-black-002: rgba(25, 25, 25, 0.95);
+  --color-black-003: rgba(26, 26, 26, 1);
 
   /* gray */
   --color-gray-001: rgba(255, 255, 255, 0.1);
