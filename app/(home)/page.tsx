@@ -1,13 +1,25 @@
 "use client";
 
 import Header from "@/app/(home)/header";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useMemo, useState } from "react";
 import AboutMe from "./about-me";
 import AboutMeDeveloper from "./about-me-developer";
 import Experience2024 from "./experience-2024";
+import Experience2022 from "./experience-2022";
+import Experience2021 from "./experience-2021";
 
 export default function Home() {
-  const [step, setStep] = useState<number>(4);
+  const [step, setStep] = useState<number>(6);
+
+  const components: { [key: number]: JSX.Element } = useMemo(() => {
+    return {
+      2: <AboutMe />,
+      3: <AboutMeDeveloper />,
+      4: <Experience2024 />,
+      5: <Experience2022 />,
+      6: <Experience2021 />,
+    };
+  }, []);
 
   const handleChangeSectionStep = (type: "prev" | "next") => {
     if (type === "prev") {
@@ -27,25 +39,30 @@ export default function Home() {
     //   handleChangeSectionStep("next");
     // }, 1000);
 
-    window.addEventListener("wheel", (e: WheelEvent) => {
+    const handleWheel = (e: WheelEvent) => {
       // e.deltaY  값이 양수면 down wheel, 음수면 up wheel
-      console.log(e.deltaY);
       const isScrollUp = e.deltaY > 0;
-      console.log(isScrollUp);
+
+      if ((isScrollUp && step === 1) || (!isScrollUp && step === 6)) return;
+
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       isScrollUp
-        ? handleChangeSectionStep("prev")
-        : handleChangeSectionStep("next");
-    });
+        ? handleChangeSectionStep("next")
+        : handleChangeSectionStep("prev");
+    };
+
+    window.addEventListener("wheel", handleWheel);
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <Header step={step} />
-      {step === 2 && <AboutMe />}
-      {step === 3 && <AboutMeDeveloper />}
-      {step === 4 && <Experience2024 />}
+      {components[step]}
     </>
   );
 }
