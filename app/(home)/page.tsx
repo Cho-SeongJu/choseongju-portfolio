@@ -2,8 +2,8 @@
 
 import Header from "@/app/(home)/header";
 import { JSX, useEffect, useMemo, useState } from "react";
-import AboutMe from "./about-me";
-import AboutMeDeveloper from "./about-me-developer";
+import AboutMe from "./about-me/about-me";
+import AboutMeDeveloper from "./about-me/about-me-developer";
 import Experience2024 from "./experience/experience-2024";
 import Experience2022 from "./experience/experience-2022";
 import Experience2021 from "./experience/experience-2021";
