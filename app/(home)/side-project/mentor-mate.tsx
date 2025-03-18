@@ -1,5 +1,5 @@
 import TechStackTag from "@/components/tech-stack-tag";
-import Image from "next/image";
+import YoutubeVideo from "@/components/youtube-video";
 import PlayIcon from "@/public/play.svg";
 import Link from "next/link";
 
@@ -87,12 +87,7 @@ export default function MentorMate() {
         </div>
       </div>
       <div className="flex flex-col">
-        <Image
-          alt="crew-play"
-          src="/image/jurin.png"
-          width={669}
-          height={631}
-        />
+        <YoutubeVideo videoId="lDah3XZUDsk" />
         <div className="flex items-center justify-center mt-[30px]">
           <Link
             href="https://github.com/JurinApp/FE_REPO"
