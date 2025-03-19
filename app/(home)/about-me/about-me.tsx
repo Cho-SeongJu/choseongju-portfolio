@@ -1,7 +1,7 @@
 import Scroll from "@/components/scroll";
 import useObserver from "@/hooks/useObserver";
 import { TStep } from "@/interface/common";
-import { Dispatch, RefObject, SetStateAction, useRef } from "react";
+import { Dispatch, RefObject, SetStateAction } from "react";
 
 interface IAboutMeProps {
   readonly targetRef: RefObject<HTMLElement | null>;
