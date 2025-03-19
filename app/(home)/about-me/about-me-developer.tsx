@@ -1,9 +1,25 @@
 import Scroll from "@/components/scroll";
+import useObserver from "@/hooks/useObserver";
+import { TStep } from "@/interface/common";
+import { Dispatch, RefObject, SetStateAction } from "react";
 
-export default function AboutMeDeveloper() {
+interface IAboutMeProps {
+  readonly targetRef: RefObject<HTMLElement | null>;
+  readonly setStep: Dispatch<SetStateAction<TStep>>;
+}
+
+export default function AboutMeDeveloper({
+  targetRef,
+  setStep,
+}: IAboutMeProps) {
+  useObserver({ targetRef, changeStep: "about", setStep });
+
   return (
     <>
-      <section className="flex items-center justify-center h-screen w-screen">
+      <section
+        ref={targetRef}
+        className="flex items-center justify-center h-screen w-screen"
+      >
         <div className="flex flex-col text-white-002 font-bold">
           <div className="flex mb-[24px] items-center">
             <span className="text-[60px]">저는</span>

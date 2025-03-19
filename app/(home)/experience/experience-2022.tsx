@@ -1,11 +1,31 @@
 import Divider from "@/components/divider";
 import TechStackTag from "@/components/tech-stack-tag";
+import useObserver from "@/hooks/useObserver";
+import { TStep } from "@/interface/common";
+import { Dispatch, RefObject, SetStateAction } from "react";
+
+interface IExperience2022Props {
+  readonly targetRef: RefObject<HTMLElement | null>;
+  readonly setStep: Dispatch<SetStateAction<TStep>>;
+}
 
 const TECH_STACK = ["JavaScript", "JSP", "CSS", "WebSquare", "SVN", "Jira"];
 
-export default function Experience2022() {
+export default function Experience2022({
+  targetRef,
+  setStep,
+}: IExperience2022Props) {
+  useObserver({
+    targetRef,
+    changeStep: "experience",
+    setStep,
+  });
+
   return (
-    <section className="flex items-center justify-center min-h-screen w-screen pt-[120px] px-[200px] pb-[332px]">
+    <section
+      ref={targetRef}
+      className="flex items-center justify-center min-h-screen w-screen pt-[120px] px-[200px] pb-[332px]"
+    >
       <div className="flex w-[1520px] justify-between">
         <h3 className="font-title text-white-002 text-[160px] leading-none">
           2022

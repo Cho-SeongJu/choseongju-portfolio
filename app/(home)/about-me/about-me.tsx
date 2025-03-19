@@ -1,9 +1,22 @@
 import Scroll from "@/components/scroll";
+import useObserver from "@/hooks/useObserver";
+import { TStep } from "@/interface/common";
+import { Dispatch, RefObject, SetStateAction, useRef } from "react";
 
-export default function AboutMe() {
+interface IAboutMeProps {
+  readonly targetRef: RefObject<HTMLElement | null>;
+  readonly setStep: Dispatch<SetStateAction<TStep>>;
+}
+
+export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
+  useObserver({ targetRef, changeStep: "about", setStep });
+
   return (
     <>
-      <section className="text-white-002 w-screen h-screen flex items-center justify-center">
+      <section
+        ref={targetRef}
+        className="text-white-002 w-screen h-screen flex items-center justify-center"
+      >
         <div className="flex flex-col text-center w-[789px]">
           <div className="flex overflow-hidden mx-auto">
             <span className="font-bold text-[80px] fade-up-animation opacity-0">

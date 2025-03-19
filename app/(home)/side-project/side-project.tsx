@@ -1,11 +1,28 @@
+import useObserver from "@/hooks/useObserver";
+import { TStep } from "@/interface/common";
+import { Dispatch, RefObject, SetStateAction } from "react";
 import CrewPlay from "./crew-play";
 import FootStep from "./foot-step";
 import Jurin from "./jurin";
 import MentorMate from "./mentor-mate";
 
-export default function SideProject() {
+interface ISideProjectProps {
+  readonly targetRef: RefObject<HTMLElement | null>;
+  readonly setStep: Dispatch<SetStateAction<TStep>>;
+}
+
+export default function SideProject({ targetRef, setStep }: ISideProjectProps) {
+  useObserver({
+    targetRef,
+    changeStep: "project",
+    setStep,
+  });
+
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section
+      ref={targetRef}
+      className="flex flex-col items-center justify-center"
+    >
       <CrewPlay />
       <Jurin />
       <MentorMate />
