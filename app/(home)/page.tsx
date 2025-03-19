@@ -34,6 +34,15 @@ export default function Home() {
     <>
       <Header
         step={step}
+        refObject={{
+          aboutMeSectionRef,
+          aboutMeDeveloperSectionRef,
+          experience2024SectionRef,
+          experience2022SectionRef,
+          experience2021SectionRef,
+          techStackSectionRef,
+          sideProjectSectionRef,
+        }}
         setStep={setStep}
       />
       {step !== "intro" && (

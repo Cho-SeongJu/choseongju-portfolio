@@ -1,9 +1,10 @@
 import LinkIcon from "@/components/icon/link_icon";
 import { TStep } from "@/interface/common";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, RefObject, SetStateAction } from "react";
 
 interface IHeaderProps {
   readonly step: string;
+  readonly refObject: { [key: string]: RefObject<HTMLElement | null> };
   readonly setStep: Dispatch<SetStateAction<TStep>>;
 }
 
@@ -19,18 +20,58 @@ interface IMenu {
   }[];
 }
 
-export default function Header({ step, setStep }: IHeaderProps) {
+export default function Header({ step, refObject, setStep }: IHeaderProps) {
   const MENU: IMenu = {
     section: [
       { text: "INTRO", step: "intro", onClick: () => setStep("intro") },
-      { text: "ABOUT", step: "about", onClick: () => setStep("about") },
+      {
+        text: "ABOUT",
+        step: "about",
+        onClick: () => {
+          refObject.aboutMeSectionRef.current?.scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth",
+          });
+          setStep("about");
+        },
+      },
       {
         text: "EXPERIENCE",
         step: "experience",
-        onClick: () => setStep("experience"),
+        onClick: () => {
+          refObject.experience2024SectionRef.current?.scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth",
+          });
+          setStep("experience");
+        },
       },
-      { text: "SKILL", step: "skill", onClick: () => setStep("skill") },
-      { text: "PROJECT", step: "project", onClick: () => setStep("project") },
+      {
+        text: "SKILL",
+        step: "skill",
+        onClick: () => {
+          refObject.techStackSectionRef.current?.scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth",
+          });
+          setStep("skill");
+        },
+      },
+      {
+        text: "PROJECT",
+        step: "project",
+        onClick: () => {
+          refObject.sideProjectSectionRef.current?.scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth",
+          });
+          setStep("project");
+        },
+      },
     ],
     link: [
       { text: "GITHUB", href: "" },
