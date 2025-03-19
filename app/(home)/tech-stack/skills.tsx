@@ -64,13 +64,19 @@ export default function Skills({
     <div
       className={`${
         selectedType === "skills" ? "bg-white-001" : "bg-black-003"
-      } py-[48px] px-[76px] rounded-[50px] flex flex-col cursor-pointer`}
+      } ${
+        selectedType === "skills"
+          ? "py-[48px] px-[76px]"
+          : "pt-[48px] px-[42px] py-[209px]"
+      } rounded-[50px] flex flex-col cursor-pointer`}
       onMouseEnter={() => setSelectedType("skills")}
     >
       <h3
         className={`${
-          selectedType === "skills" ? "text-black-002" : "text-gray-002"
-        } font-bold text-[30px] text-center mb-[45px]`}
+          selectedType === "skills"
+            ? "text-black-002 mb-[45px]"
+            : "text-gray-002 mb-[166px]"
+        } font-bold text-[30px] text-center`}
       >
         Front-End Skill
       </h3>

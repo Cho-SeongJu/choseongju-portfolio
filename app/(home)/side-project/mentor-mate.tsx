@@ -15,7 +15,7 @@ const TECH_STACK = [
 
 export default function MentorMate() {
   return (
-    <div className="flex mx-auto justify-between mb-[100px]">
+    <div className="w-screen h-screen flex mx-auto justify-between pt-[80px] px-[200px] pb-[101px]">
       <div className="flex flex-col justify-between w-[622px]">
         <div>
           <div className="flex flex-col text-white-002">

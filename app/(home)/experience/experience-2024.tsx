@@ -16,9 +16,9 @@ const TECH_STACK = [
 
 export default function Experience2024() {
   return (
-    <section className="flex items-center justify-center h-screen w-screen">
-      <div className="flex">
-        <h3 className="font-title text-white-002 text-[160px] mr-[160px]">
+    <section className="flex items-center justify-center min-h-screen w-screen pt-[120px] px-[200px] pb-[79px]">
+      <div className="flex w-[1520px] justify-between">
+        <h3 className="font-title text-white-002 text-[160px] leading-none">
           2024
         </h3>
         <div className="w-[878px] py-[30px]">

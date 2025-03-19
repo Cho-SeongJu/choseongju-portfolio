@@ -15,7 +15,7 @@ const TECH_STACK = [
 
 export default function FootStep() {
   return (
-    <div className="flex mx-auto justify-between">
+    <div className="flex mx-auto justify-between w-screen h-screen pt-[75px] px-[200px] pb-[96px]">
       <div className="flex flex-col justify-between w-[622px]">
         <div>
           <div className="flex flex-col text-white-002">

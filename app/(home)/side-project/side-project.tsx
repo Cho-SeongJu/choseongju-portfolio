@@ -5,7 +5,7 @@ import MentorMate from "./mentor-mate";
 
 export default function SideProject() {
   return (
-    <section className="min-h-screen w-screen flex flex-col items-center justify-center">
+    <section className="flex flex-col items-center justify-center">
       <CrewPlay />
       <Jurin />
       <MentorMate />
