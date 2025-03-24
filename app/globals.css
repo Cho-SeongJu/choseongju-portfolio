@@ -50,13 +50,23 @@ html {
   --leading-160: 1.6;
 }
 
+@layer utilities {
+  .text-stroke-intro {
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 0.34px rgba(255, 255, 255, 0.9);
+  }
+}
+
 .font-title {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 400;
 }
 
 .intro-animation {
-  transition-delay: 5000ms;
+  transition-delay: 300ms;
   transition-duration: 200ms;
   transition-timing-function: ease-in;
 }
@@ -86,7 +96,7 @@ html {
 }
 
 .fade-up-animation {
-  animation-delay: 5000ms;
+  animation-delay: 300ms;
   animation-duration: 200ms;
   animation-timing-function: ease-in;
   animation-name: fade-up-animation;
@@ -164,7 +174,7 @@ html {
   }
 }
 
-.fade-up-experience-animation {
+.fade-up-animation {
   animation-delay: 300ms;
   animation-duration: 800ms;
   animation-timing-function: ease-in;
