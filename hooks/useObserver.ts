@@ -4,23 +4,34 @@ import { Dispatch, RefObject, SetStateAction, useEffect } from "react";
 interface IUseObserverProps {
   readonly targetRef: RefObject<HTMLElement | null>;
   readonly changeStep: TStep;
-  readonly setStep: Dispatch<SetStateAction<TStep>>;
+  readonly threshold: number;
+  readonly setStep?: Dispatch<SetStateAction<TStep>>;
+  readonly setExperienceYear?: Dispatch<SetStateAction<number>>;
+  readonly experienceYear?: number;
 }
 
 export default function useObserver({
   targetRef,
   changeStep,
+  threshold,
   setStep,
+  setExperienceYear,
+  experienceYear,
 }: IUseObserverProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          console.log(changeStep);
-          setStep(changeStep);
+          if (setStep) {
+            setStep(changeStep);
+          }
+
+          if (setExperienceYear && experienceYear) {
+            setExperienceYear(experienceYear);
+          }
         }
       },
-      { threshold: 0.2 }
+      { threshold }
     );
 
     if (targetRef.current) {
@@ -33,5 +44,6 @@ export default function useObserver({
         observer.unobserve(targetRef.current);
       }
     };
-  }, [changeStep, setStep, targetRef]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [changeStep, setStep, targetRef, experienceYear]);
 }
