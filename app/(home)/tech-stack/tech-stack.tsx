@@ -12,7 +12,7 @@ interface ITechStackProps {
 type TType = "skills" | "styleAndOther";
 
 export default function TechStack({ targetRef, setStep }: ITechStackProps) {
-  useObserver({ targetRef, changeStep: "skill", setStep });
+  useObserver({ targetRef, changeStep: "skill", setStep, threshold: 0.8 });
 
   const [selectedType, setSelectedType] = useState<TType>("styleAndOther");
 
