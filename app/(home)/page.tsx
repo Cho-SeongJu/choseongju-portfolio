@@ -8,9 +8,12 @@ import AboutMeDeveloper from "./about-me/about-me-developer";
 import Experience from "./experience/experience";
 import SideProject from "./side-project/side-project";
 import TechStack from "./tech-stack/tech-stack";
+import Scroll from "@/components/scroll";
 
 export default function Home() {
   const [step, setStep] = useState<TStep>("intro");
+  const [isVisibleScrollIcon, setIsVisibleScrollIcon] =
+    useState<boolean>(false);
 
   const aboutMeSectionRef = useRef<HTMLElement>(null);
   const aboutMeDeveloperSectionRef = useRef<HTMLElement>(null);
@@ -19,11 +22,19 @@ export default function Home() {
   const sideProjectSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (step !== "intro") return;
+    if (step === "intro") {
+      const timer = setTimeout(() => {
+        setStep("about");
+      }, 1000);
 
-    const timer = setTimeout(() => setStep("about"), 1000);
+      return () => clearTimeout(timer);
+    }
 
-    return () => clearTimeout(timer);
+    if (step === "about") {
+      setIsVisibleScrollIcon(true);
+    } else {
+      setIsVisibleScrollIcon(false);
+    }
   }, [step]);
 
   return (
@@ -63,6 +74,7 @@ export default function Home() {
           />
         </>
       )}
+      {isVisibleScrollIcon && <Scroll />}
     </>
   );
 }

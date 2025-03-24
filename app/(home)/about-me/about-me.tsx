@@ -1,4 +1,3 @@
-import Scroll from "@/components/scroll";
 import useObserver from "@/hooks/useObserver";
 import { TStep } from "@/interface/common";
 import { Dispatch, RefObject, SetStateAction } from "react";
@@ -37,7 +36,6 @@ export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
           </div>
         </div>
       </section>
-      <Scroll />
     </>
   );
 }
