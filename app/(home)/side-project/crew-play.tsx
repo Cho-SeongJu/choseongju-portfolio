@@ -15,7 +15,7 @@ const TECH_STACK = [
 
 export default function CrewPlay() {
   return (
-    <div className="w-screen min-h-screen flex mx-auto justify-between pt-[75px] px-[200px] pb-[96px]">
+    <div className="w-screen min-h-screen flex mx-auto justify-between pt-[155px] px-[200px] pb-[96px]">
       <div className="flex flex-col justify-between w-[622px]">
         <div>
           <div className="flex flex-col text-white-002">
