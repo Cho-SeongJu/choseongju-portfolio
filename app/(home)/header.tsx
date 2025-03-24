@@ -146,7 +146,9 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
           </span>
           <span
             className={`${
-              step === "intro" ? "mt-[30px] text-[200px]" : "text-[22.37px]"
+              step === "intro"
+                ? "text-stroke-intro mt-[30px] text-[200px]"
+                : "text-stroke text-[22.37px]"
             } inline-block align-middle tracking-1 intro-animation`}
           >
             Cho Seong Ju
