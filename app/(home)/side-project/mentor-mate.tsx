@@ -87,7 +87,9 @@ export default function MentorMate() {
         </div>
       </div>
       <div className="flex flex-col">
-        <YoutubeVideo videoId="lDah3XZUDsk" />
+        <div className="rounded-[50px] overflow-hidden">
+          <YoutubeVideo videoId="lDah3XZUDsk" />
+        </div>
         <div className="flex items-center justify-center mt-[30px]">
           <Link
             href="https://github.com/JurinApp/FE_REPO"

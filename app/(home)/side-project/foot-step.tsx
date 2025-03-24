@@ -74,7 +74,9 @@ export default function FootStep() {
         </div>
       </div>
       <div className="flex flex-col">
-        <YoutubeVideo videoId="hgY-RED-7X8" />
+        <div className="rounded-[50px] overflow-hidden">
+          <YoutubeVideo videoId="hgY-RED-7X8" />
+        </div>
         <div className="flex items-center justify-center mt-[30px]">
           <Link
             href="https://github.com/JurinApp/FE_REPO"
