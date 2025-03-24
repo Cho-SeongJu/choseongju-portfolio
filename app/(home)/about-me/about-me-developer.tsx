@@ -12,7 +12,7 @@ export default function AboutMeDeveloper({
   targetRef,
   setStep,
 }: IAboutMeProps) {
-  useObserver({ targetRef, changeStep: "about", setStep });
+  useObserver({ targetRef, changeStep: "about", setStep, threshold: 0.8 });
 
   return (
     <>
