@@ -40,7 +40,7 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
         text: "EXPERIENCE",
         step: "experience",
         onClick: () => {
-          refObject.experience2024SectionRef.current?.scrollIntoView({
+          refObject.experienceSectionRef.current?.scrollIntoView({
             block: "start",
             inline: "nearest",
             behavior: "smooth",
