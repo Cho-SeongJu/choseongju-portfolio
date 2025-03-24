@@ -19,11 +19,13 @@ const TECH_STACK = [
 interface IExperience2024Props {
   readonly experience2024Ref: RefObject<HTMLDivElement | null>;
   readonly setExperienceYear: Dispatch<SetStateAction<number>>;
+  readonly isVisible: boolean;
 }
 
 export default function Experience2024({
   experience2024Ref,
   setExperienceYear,
+  isVisible,
 }: IExperience2024Props) {
   useObserver({
     targetRef: experience2024Ref,
@@ -36,7 +38,11 @@ export default function Experience2024({
   return (
     <div
       ref={experience2024Ref}
-      className="w-[878px] pb-[79px]"
+      className={`w-[878px] pb-[79px] ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-[100px]"
+      } duration-[400ms] delay-100 ease-in`}
     >
       <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
         키클롭스(CYCLOPS)

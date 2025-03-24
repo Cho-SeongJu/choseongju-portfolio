@@ -8,11 +8,13 @@ const TECH_STACK = ["JavaScript", "JSP", "CSS", "WebSquare", "SVN", "Jira"];
 interface IExperience2024Props {
   readonly experience2022Ref: RefObject<HTMLDivElement | null>;
   readonly setExperienceYear: Dispatch<SetStateAction<number>>;
+  readonly isVisible: boolean;
 }
 
 export default function Experience2022({
   experience2022Ref,
   setExperienceYear,
+  isVisible,
 }: IExperience2024Props) {
   useObserver({
     targetRef: experience2022Ref,
@@ -25,7 +27,11 @@ export default function Experience2022({
   return (
     <div
       ref={experience2022Ref}
-      className="w-[878px] pb-[332px]"
+      className={`w-[878px] pb-[332px] ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-[100px]"
+      } duration-[400ms] delay-100 ease-in`}
     >
       <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
         와이앤씨스마트앱스 (Y&C SmartApps)

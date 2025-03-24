@@ -7,6 +7,7 @@ interface IUseObserverProps {
   readonly threshold: number;
   readonly setStep?: Dispatch<SetStateAction<TStep>>;
   readonly setExperienceYear?: Dispatch<SetStateAction<number>>;
+  readonly setIsVisible?: () => void;
   readonly experienceYear?: number;
 }
 
@@ -16,6 +17,7 @@ export default function useObserver({
   threshold,
   setStep,
   setExperienceYear,
+  setIsVisible,
   experienceYear,
 }: IUseObserverProps) {
   useEffect(() => {
@@ -28,6 +30,10 @@ export default function useObserver({
 
           if (setExperienceYear && experienceYear) {
             setExperienceYear(experienceYear);
+          }
+
+          if (setIsVisible) {
+            setIsVisible();
           }
         }
       },

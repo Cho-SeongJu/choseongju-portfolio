@@ -15,16 +15,22 @@ export default function Experience({
   setStep,
 }: IExperienceProps) {
   const [experienceYear, setExperienceYear] = useState<number>(2024);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const experience2024Ref = useRef<HTMLDivElement>(null);
   const experience2022Ref = useRef<HTMLDivElement>(null);
   const experience2021Ref = useRef<HTMLDivElement>(null);
+
+  const changeVisible = () => {
+    setIsVisible(true);
+  };
 
   useObserver({
     targetRef: experienceSectionRef,
     changeStep: "experience",
     threshold: 0.2,
     setStep,
+    setIsVisible: changeVisible,
   });
 
   return (
@@ -33,21 +39,30 @@ export default function Experience({
       className="w-screen min-h-screen px-[200px]"
     >
       <div className="flex justify-between pt-[120px]">
-        <h3 className="sticky top-[120px] self-start font-title text-white-002 text-[160px] leading-none">
+        <h3
+          className={`sticky top-[120px] self-start font-title text-white-002 text-[160px] leading-none ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[100px]"
+          } duration-[400ms] delay-100 ease-in`}
+        >
           {experienceYear}
         </h3>
-        <div className="min-h-screen overflow-y-auto">
+        <div className="min-h-screen">
           <Experience2024
             experience2024Ref={experience2024Ref}
             setExperienceYear={setExperienceYear}
+            isVisible={isVisible}
           />
           <Experience2022
             experience2022Ref={experience2022Ref}
             setExperienceYear={setExperienceYear}
+            isVisible={isVisible}
           />
           <Experience2021
             experience2021Ref={experience2021Ref}
             setExperienceYear={setExperienceYear}
+            isVisible={isVisible}
           />
         </div>
       </div>

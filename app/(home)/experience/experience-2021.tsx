@@ -8,11 +8,13 @@ const TECH_STACK = ["JavaScript", "JSP", "CSS", "JQuery", "SVN"];
 interface IExperience2021Props {
   readonly experience2021Ref: RefObject<HTMLDivElement | null>;
   readonly setExperienceYear: Dispatch<SetStateAction<number>>;
+  readonly isVisible: boolean;
 }
 
 export default function Experience2021({
   experience2021Ref,
   setExperienceYear,
+  isVisible,
 }: IExperience2021Props) {
   useObserver({
     targetRef: experience2021Ref,
@@ -25,7 +27,11 @@ export default function Experience2021({
   return (
     <div
       ref={experience2021Ref}
-      className="w-[878px] pb-[100px]"
+      className={`w-[878px] pb-[100px] ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-[100px]"
+      } duration-[400ms] delay-100 ease-in`}
     >
       <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
         조인트리 (JOINTREE)
