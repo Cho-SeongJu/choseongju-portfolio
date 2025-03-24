@@ -56,7 +56,7 @@ html {
 }
 
 .intro-animation {
-  transition-delay: 300ms;
+  transition-delay: 5000ms;
   transition-duration: 200ms;
   transition-timing-function: ease-in;
 }
@@ -86,7 +86,7 @@ html {
 }
 
 .fade-up-animation {
-  animation-delay: 300ms;
+  animation-delay: 5000ms;
   animation-duration: 200ms;
   animation-timing-function: ease-in;
   animation-name: fade-up-animation;
@@ -145,4 +145,29 @@ html {
   animation-iteration-count: infinite;
   animation-duration: 6000ms;
   animation-timing-function: linear;
+}
+
+.marquee-item {
+  transition-duration: 300ms;
+  transform: translate3d(0px, -92px, 0px);
+}
+
+@keyframes fade-up-experience-animation {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-up-experience-animation {
+  animation-delay: 300ms;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in;
+  animation-name: fade-up-experience-animation;
+  animation-fill-mode: forwards;
 }
