@@ -103,8 +103,8 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
                   index < 4 && "mr-[36px]"
                 } ${
                   sectionMenu.step === step
-                    ? "font-bold text-white-003"
-                    : "text-white-005 hover:text-white-003 hover:font-bold"
+                    ? "text-white-001"
+                    : "text-white-006 hover:text-white-003"
                 }`}
                 onClick={sectionMenu.onClick}
               >
@@ -121,7 +121,7 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
             {MENU.link.map((linkMenu, index) => (
               <li
                 key={linkMenu.text}
-                className={`text-white-005 text-[16px] cursor-pointer flex items-center hover:text-white-003 hover:font-bold ${
+                className={`text-white-006 text-[16px] cursor-pointer flex items-center hover:text-white-001 ${
                   index === 0 && "mr-[36px]"
                 }`}
               >
