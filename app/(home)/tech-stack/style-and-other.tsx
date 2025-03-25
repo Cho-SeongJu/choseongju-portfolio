@@ -9,6 +9,7 @@ import AWSIcon from "@/public/svg/style-and-other/aws.svg";
 import S3Icon from "@/public/svg/style-and-other/s3.svg";
 import ViewText from "./components/view-text";
 import IconGrid from "./components/icon-grid";
+import { SKILL_STYLE } from "@/constants/tech-stack";
 
 interface ISkillsProps {
   readonly selectedType: "skills" | "styleAndOther";
@@ -61,24 +62,32 @@ export default function StyleAndOther({
         selectedType === "styleAndOther"
           ? "py-[48px] px-[76px]"
           : "pt-[48px] px-[42px] py-[209px]"
-      } rounded-[50px] flex flex-col cursor-pointer`}
+      } rounded-[50px] flex flex-col cursor-pointer h-[571px]`}
       onMouseEnter={() => setSelectedType("styleAndOther")}
     >
       <h3
         className={`${
           selectedType === "styleAndOther"
             ? "text-black-002 mb-[45px]"
-            : "text-gray-002 mb-[108px]"
+            : "text-gray-002 mb-[166px]"
         } font-bold text-[30px] text-center`}
       >
         Styles & Others
       </h3>
       <div className="grow items-center flex justify-center">
-        {selectedType !== "styleAndOther" ? (
-          <ViewText />
-        ) : (
-          <IconGrid iconList={STYLE_AND_OTHER_ICON} />
-        )}
+        <div
+          className={`${
+            selectedType !== "styleAndOther"
+              ? SKILL_STYLE.viewText
+              : SKILL_STYLE.iconGrid
+          } transition-all duration-400`}
+        >
+          {selectedType !== "styleAndOther" ? (
+            <ViewText />
+          ) : (
+            <IconGrid iconList={STYLE_AND_OTHER_ICON} />
+          )}
+        </div>
       </div>
     </div>
   );

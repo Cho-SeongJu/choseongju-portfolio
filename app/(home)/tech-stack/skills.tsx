@@ -9,6 +9,7 @@ import ReduxIcon from "@/public/svg/skills/redux.svg";
 import { Dispatch, JSX, SetStateAction, useMemo } from "react";
 import ViewText from "./components/view-text";
 import IconGrid from "./components/icon-grid";
+import { SKILL_STYLE } from "@/constants/tech-stack";
 
 interface ISkillsProps {
   readonly selectedType: "skills" | "styleAndOther";
@@ -68,7 +69,7 @@ export default function Skills({
         selectedType === "skills"
           ? "py-[48px] px-[76px]"
           : "pt-[48px] px-[42px] py-[209px]"
-      } rounded-[50px] flex flex-col cursor-pointer`}
+      } rounded-[50px] flex flex-col cursor-pointer h-[571px]`}
       onMouseEnter={() => setSelectedType("skills")}
     >
       <h3
@@ -81,11 +82,19 @@ export default function Skills({
         Front-End Skill
       </h3>
       <div className="grow items-center flex justify-center">
-        {selectedType !== "skills" ? (
-          <ViewText />
-        ) : (
-          <IconGrid iconList={SKILL_ICON} />
-        )}
+        <div
+          className={`${
+            selectedType !== "skills"
+              ? SKILL_STYLE.viewText
+              : SKILL_STYLE.iconGrid
+          } transition-all duration-400 `}
+        >
+          {selectedType !== "skills" ? (
+            <ViewText />
+          ) : (
+            <IconGrid iconList={SKILL_ICON} />
+          )}
+        </div>
       </div>
     </div>
   );

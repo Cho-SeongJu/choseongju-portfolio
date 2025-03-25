@@ -12,17 +12,42 @@ interface ITechStackProps {
 type TType = "skills" | "styleAndOther";
 
 export default function TechStack({ targetRef, setStep }: ITechStackProps) {
-  useObserver({ targetRef, changeStep: "skill", setStep, threshold: 0.8 });
+  const [selectedType, setSelectedType] = useState<TType>("skills");
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const [selectedType, setSelectedType] = useState<TType>("styleAndOther");
+  const changeVisible = () => {
+    setIsVisible(true);
+  };
+
+  useObserver({
+    targetRef,
+    changeStep: "skill",
+    setStep,
+    threshold: 0.4,
+    setIsVisible: changeVisible,
+  });
 
   return (
     <section
       ref={targetRef}
       className="flex flex-col justify-center items-center w-screen min-h-screen text-white-002 pt-[124px] px-[200px] pb-[175px]"
     >
-      <h2 className="font-bold text-[50px] mb-[65px]">Skill</h2>
-      <div className="flex w-[1520px]">
+      <h2
+        className={`font-bold text-[50px] mb-[65px] ${
+          isVisible
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 translate-x-[100px]"
+        } duration-[350ms] delay-100 ease-in`}
+      >
+        Skill
+      </h2>
+      <div
+        className={`flex w-[1520px] ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[100px]"
+        } duration-[350ms] delay-100 ease-in`}
+      >
         <Skills
           selectedType={selectedType}
           setSelectedType={setSelectedType}

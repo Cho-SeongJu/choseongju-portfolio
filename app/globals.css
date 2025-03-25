@@ -181,3 +181,11 @@ html {
   animation-name: fade-up-experience-animation;
   animation-fill-mode: forwards;
 }
+
+.slide-in-animation {
+  animation-delay: 300ms;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-name: fade-in-animation;
+  animation-fill-mode: forwards;
+}
