@@ -99,7 +99,7 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
             {MENU.section.map((sectionMenu, index) => (
               <li
                 key={sectionMenu.text}
-                className={`text-[16px] cursor-pointer ${
+                className={`text-[16px] cursor-pointer transition-colors duration-200 ${
                   index < 4 && "mr-[36px]"
                 } ${
                   sectionMenu.step === step
@@ -121,7 +121,7 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
             {MENU.link.map((linkMenu, index) => (
               <li
                 key={linkMenu.text}
-                className={`text-white-006 text-[16px] cursor-pointer flex items-center hover:text-white-001 ${
+                className={`text-white-006 text-[16px] cursor-pointer flex items-center hover:text-white-001 transition-colors duration-200 ${
                   index === 0 && "mr-[36px]"
                 }`}
               >
