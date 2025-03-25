@@ -1,5 +1,6 @@
 import LinkIcon from "@/components/icon/link_icon";
 import { TStep } from "@/interface/common";
+import Link from "next/link";
 import { Dispatch, RefObject, SetStateAction } from "react";
 
 interface IHeaderProps {
@@ -74,10 +75,14 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
       },
     ],
     link: [
-      { text: "GITHUB", href: "" },
-      { text: "NOTION", href: "" },
+      { text: "GITHUB", href: "https://github.com/Cho-SeongJu" },
+      {
+        text: "NOTION",
+        href: "https://rich-crush-b28.notion.site/Resume-184c16fc38448044b582c1bc233dc570?pvs=4",
+      },
     ],
   };
+
   return (
     <header className="fixed top-0 w-full z-[999]">
       <div
@@ -120,7 +125,12 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
                   index === 0 && "mr-[36px]"
                 }`}
               >
-                {linkMenu.text}
+                <Link
+                  href={linkMenu.href}
+                  target="_blank"
+                >
+                  {linkMenu.text}
+                </Link>
                 <LinkIcon />
               </li>
             ))}
