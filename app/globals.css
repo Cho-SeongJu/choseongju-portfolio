@@ -66,7 +66,6 @@ html {
 }
 
 .intro-animation {
-  transition-delay: 300ms;
   transition-duration: 200ms;
   transition-timing-function: ease-in;
 }
@@ -114,8 +113,7 @@ html {
 }
 
 .fade-in-animation {
-  animation-delay: 300ms;
-  animation-duration: 200ms;
+  animation-duration: 100ms;
   animation-timing-function: ease-in;
   animation-name: fade-in-animation;
   animation-fill-mode: forwards;

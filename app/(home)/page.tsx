@@ -22,19 +22,25 @@ export default function Home() {
   const sideProjectSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (step === "intro") {
-      const timer = setTimeout(() => {
-        setStep("about");
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-
-    if (step === "about") {
+    if (step === "about" || step === "intro") {
       setIsVisibleScrollIcon(true);
     } else {
       setIsVisibleScrollIcon(false);
     }
+
+    const handleWheel = (e: WheelEvent) => {
+      if (step === "intro" && e.deltaY > 0) {
+        const timer = setTimeout(() => setStep("about"), 500);
+        return () => clearTimeout(timer);
+      }
+
+      if (step === "about" && e.deltaY < 0 && window.scrollY === 0) {
+        setStep("intro");
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel);
+    return () => window.removeEventListener("wheel", handleWheel);
   }, [step]);
 
   return (

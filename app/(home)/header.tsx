@@ -144,7 +144,9 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
       >
         <h1
           className={`${
-            step === "intro" ? "translate-y-full" : "mx-auto translate-y-[16px]"
+            step === "intro"
+              ? "translate-y-[75%]"
+              : "mx-auto translate-y-[16px]"
           } intro-animation`}
         >
           <span
