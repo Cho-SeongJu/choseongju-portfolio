@@ -138,28 +138,6 @@ html {
   animation-iteration-count: infinite;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(-200%);
-  }
-}
-
-.marquee {
-  animation-name: marquee;
-  animation-iteration-count: infinite;
-  animation-duration: 6000ms;
-  animation-timing-function: linear;
-}
-
-.marquee-item {
-  transition-duration: 300ms;
-  transform: translate3d(0px, -92px, 0px);
-}
-
 @keyframes fade-up-experience-animation {
   from {
     opacity: 0;
