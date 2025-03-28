@@ -1,4 +1,4 @@
-import LinkIcon from "@/components/icon/link_icon";
+import LinkIcon from "@/components/link-icon";
 import { TStep } from "@/interface/common";
 import Link from "next/link";
 import { Dispatch, RefObject, SetStateAction } from "react";
