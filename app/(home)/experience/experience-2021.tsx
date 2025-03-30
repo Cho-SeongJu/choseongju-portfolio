@@ -44,22 +44,27 @@ export default function Experience2021({
       <div className="text-white-004 flex flex-col font-medium text-[20px] leading-140 mb-[50px]">
         <div className="flex mb-[8px]">
           <span className="mx-[12.5px]">•</span>
-          <span>사용자 권한 기능 페이지 와이어 프레임 제작</span>
-        </div>
-        <div className="flex mb-[8px]">
-          <span className="mx-[12.5px]">•</span>
           <span>
-            사용자 권한 로그인, 회원 가입, 날짜 별 식단 표 조회 및 예약, 회원
-            정보 수정 페이지 UI 구현 및 기능 개발
+            <strong>로그인 및 회원가입 페이지 구현</strong>
           </span>
         </div>
         <div className="flex mb-[8px]">
           <span className="mx-[12.5px]">•</span>
-          <span>사용자 예약 여부 확인 기능 개발</span>
+          <span>
+            <strong>날짜 별 식단 표 조회 및 예약 페이지 구현</strong>
+          </span>
         </div>
         <div className="flex mb-[8px]">
           <span className="mx-[12.5px]">•</span>
-          <span>사용자 권한 페이지 기능 유지 보수</span>
+          <span>
+            <strong>회원 정보 수정 페이지 구현</strong>
+          </span>
+        </div>
+        <div className="flex mb-[8px]">
+          <span className="mx-[12.5px]">•</span>
+          <span>
+            <strong>공지사항 조회 페이지 구현</strong>
+          </span>
         </div>
       </div>
       <div>
