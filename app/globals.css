@@ -42,12 +42,20 @@ html {
   --color-white-005: rgba(255, 255, 255, 0.8);
   --color-white-006: rgba(255, 255, 255, 0.7);
 
+  /* letter-spacing */
   --tracking-1: 1%;
 
+  /* line-height */
   --leading-130: 1.3;
   --leading-140: 1.4;
   --leading-150: 1.5;
   --leading-160: 1.6;
+
+  --breakpoint-2xl: 1300px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-lg: 1100px;
+  --breakpoint-md: 500px;
+  /* --breakpoint-tablet: ; */
 }
 
 @layer utilities {
