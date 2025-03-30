@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "@/app/(home)/header";
+import Header from "@/app/(home)/header/header";
 import { TStep } from "@/interface/common";
 import { useEffect, useRef, useState } from "react";
 import AboutMe from "./about-me/about-me";
