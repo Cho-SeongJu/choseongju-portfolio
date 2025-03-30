@@ -11,8 +11,8 @@ interface IHeaderProps {
 
 interface IMenu {
   readonly section: {
-    readonly text: "INTRO" | "ABOUT" | "SKILL" | "EXPERIENCE" | "PROJECT";
-    readonly step: "intro" | "about" | "skill" | "experience" | "project";
+    readonly text: Uppercase<TStep>;
+    readonly step: TStep;
     readonly onClick: () => void;
   }[];
   readonly link: {
