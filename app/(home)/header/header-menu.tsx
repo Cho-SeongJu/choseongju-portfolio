@@ -84,7 +84,7 @@ export default function HeaderMenu({ step, refObject, setStep }: IHeaderProps) {
   };
 
   return (
-    <div className="flex w-full max-w-[1520px] md:hidden">
+    <div className="flex w-full max-w-[1520px]">
       <ul
         className={`${
           step === "intro" ? "translate-y-[-100px]" : "translate-y-0"
