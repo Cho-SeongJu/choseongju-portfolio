@@ -26,42 +26,42 @@ export default function AboutMeDeveloper({
     >
       <div className="flex flex-col text-white-002 font-bold">
         <div className="flex mb-[24px] items-center">
-          <span className="text-[60px]">저는</span>
+          <span className="xl:text-[60px] lg:text-[50px]">저는</span>
           <Swiper
-            className="w-[550px] px-[28px] h-[90px] about-me-border bg-gray-001 mx-[18px]!"
+            className="xl:text-[45px] lg:text-[40px] xl:w-[550px] lg:w-[506px] xl:px-[28px] lg:px-[33.5px] h-[90px] about-me-border bg-gray-001 mx-[18px]!"
             direction="vertical"
             autoplay={{ delay: 1000, disableOnInteraction: false }}
             loop
           >
             <SwiperSlide>
-              <span className="text-[45px] my-[16px] flex justify-center items-center">
+              <span className="xl:my-[16px] lg:my-[19px] flex justify-center items-center">
                 비즈니스 관점으로 고민하는
               </span>
             </SwiperSlide>
             <SwiperSlide>
-              <span className="text-[45px] my-[16px] flex justify-center items-center">
+              <span className="xl:my-[16px] lg:my-[19px] flex justify-center items-center">
                 작업의 목적을 이해하는
               </span>
             </SwiperSlide>
             <SwiperSlide>
-              <span className="text-[45px] my-[16px] flex justify-center items-center">
+              <span className="xl:my-[16px] lg:my-[19px] flex justify-center items-center">
                 주도적인
               </span>
             </SwiperSlide>
             <SwiperSlide>
-              <span className="text-[45px] my-[16px] flex justify-center items-center">
+              <span className="xl:my-[16px] lg:my-[19px] flex justify-center items-center">
                 코드의 일관성을 유지하는
               </span>
             </SwiperSlide>
             <SwiperSlide>
-              <span className="text-[45px] my-[16px] flex justify-center items-center">
+              <span className="xl:my-[16px] lg:my-[19px] flex justify-center items-center">
                 성장하는
               </span>
             </SwiperSlide>
           </Swiper>
-          <span className="text-[60px]">개발자로</span>
+          <span className="xl:text-[60px] lg:text-[50px]">개발자로</span>
         </div>
-        <span className="text-[60px] text-center">
+        <span className="xl:text-[60px] lg:text-[50px] text-center">
           완성도 높은 서비스를 개발합니다
         </span>
       </div>
