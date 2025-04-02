@@ -18,7 +18,7 @@ export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
       >
         <div className="flex flex-col text-center w-[789px]">
           <div className="flex overflow-hidden mx-auto">
-            <span className="font-bold xl:text-[80px] lg:text-[60px] fade-up-animation opacity-0">
+            <span className="font-bold xl:text-[80px] md:text-[60px] fade-up-animation opacity-0">
               안녕하세요!
             </span>
           </div>
