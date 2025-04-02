@@ -36,11 +36,11 @@ export default function Experience({
   return (
     <section
       ref={experienceSectionRef}
-      className="w-screen min-h-screen px-[200px]"
+      className="w-screen min-h-screen"
     >
-      <div className="flex justify-between pt-[120px]">
+      <div className="flex justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] mx-auto">
         <h3
-          className={`sticky top-[120px] self-start font-title text-white-002 text-[160px] leading-none ${
+          className={`sticky top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] leading-none ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[100px]"

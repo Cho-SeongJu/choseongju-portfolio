@@ -27,7 +27,7 @@ export default function Experience2022({
   return (
     <div
       ref={experience2022Ref}
-      className={`w-[878px] pb-[332px] ${
+      className={`xl:w-[878px] lg:w-[823px] pb-[200px] ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-[100px]"
