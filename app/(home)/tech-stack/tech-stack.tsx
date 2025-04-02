@@ -30,32 +30,34 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
   return (
     <section
       ref={targetRef}
-      className="flex flex-col justify-center items-center w-screen min-h-screen text-white-002 pt-[124px] px-[200px] pb-[175px]"
+      className="flex justify-center items-center w-screen min-h-screen text-white-002 pt-[124px] pb-[175px]"
     >
-      <h2
-        className={`font-bold text-[50px] mb-[65px] ${
-          isVisible
-            ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-[100px]"
-        } duration-[350ms] delay-100 ease-in`}
-      >
-        Skill
-      </h2>
-      <div
-        className={`flex w-[1520px] ${
-          isVisible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-[100px]"
-        } duration-[350ms] delay-100 ease-in`}
-      >
-        <Skills
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-        />
-        <StyleAndOther
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-        />
+      <div className="xl:w-[1520px] lg:w-[1140px] md:w-[800px]">
+        <h2
+          className={`font-bold lg:text-[50px] md:text-[30px] mb-[65px] ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-[100px]"
+          } duration-[350ms] delay-100 ease-in text-center`}
+        >
+          Skill
+        </h2>
+        <div
+          className={`flex ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[100px]"
+          } duration-[350ms] delay-100 ease-in`}
+        >
+          <Skills
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+          />
+          <StyleAndOther
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+          />
+        </div>
       </div>
     </section>
   );

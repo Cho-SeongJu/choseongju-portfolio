@@ -60,8 +60,8 @@ export default function StyleAndOther({
         selectedType === "styleAndOther" ? "bg-white-001" : "bg-black-003"
       } ${
         selectedType === "styleAndOther"
-          ? "py-[48px] px-[76px]"
-          : "pt-[48px] px-[42px] py-[209px]"
+          ? "py-[48px] lg:px-[76px] md:px-[50px]"
+          : "pt-[48px] px-[42px] lg:pb-[209px] md:pb-[222px]"
       } rounded-[50px] flex flex-col cursor-pointer h-[571px]`}
       onMouseEnter={() => setSelectedType("styleAndOther")}
     >
@@ -70,7 +70,7 @@ export default function StyleAndOther({
           selectedType === "styleAndOther"
             ? "text-black-002 mb-[45px]"
             : "text-gray-002 mb-[166px]"
-        } font-bold text-[30px] text-center`}
+        } font-bold lg:text-[30px] md:text-[20px] text-center`}
       >
         Styles & Others
       </h3>

@@ -18,7 +18,7 @@ export default function IconGrid({ iconList }: IIconGridProps) {
           className="w-[150px] h-[110px] flex flex-col items-center slide-in-animation opacity-0"
         >
           {icon.icon}
-          <span className="mt-[28px] text-center text-black-002 text-[16px] font-medium">
+          <span className="lg:mt-[28px] md:mt-[38px] text-center text-black-002 text-[16px] font-medium">
             {icon.name}
           </span>
         </div>
