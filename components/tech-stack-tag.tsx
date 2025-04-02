@@ -9,7 +9,7 @@ export default function TechStackTag({
 }: ITechStackTagProps) {
   return (
     <div
-      className={`px-[20px] py-[11px] bg-gray-001 rounded-[100px] inline-block mb-[14px] ${
+      className={`px-[20px] lg:py-[11px] py-[10px] bg-gray-001 rounded-[100px] inline-block mb-[14px] ${
         isNotLastIndex && "mr-[14px]"
       }`}
     >
