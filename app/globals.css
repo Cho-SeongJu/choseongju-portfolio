@@ -51,11 +51,14 @@ html {
   --leading-150: 1.5;
   --leading-160: 1.6;
 
-  --breakpoint-2xl: 1300px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-lg: 1100px;
-  --breakpoint-md: 500px;
-  /* --breakpoint-tablet: ; */
+  /* screen ~ 1600 */
+  --breakpoint-xl: 1600px;
+
+  /* 1599 ~ 1200*/
+  --breakpoint-lg: 1200px;
+
+  /* 1199 ~ 800 */
+  --breakpoint-md: 800px;
 }
 
 @layer utilities {
