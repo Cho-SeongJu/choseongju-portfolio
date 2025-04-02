@@ -38,21 +38,21 @@ export default function Experience2024({
   return (
     <div
       ref={experience2024Ref}
-      className={`xl:w-[878px] lg:w-[823px] pb-[200px] ${
+      className={`pb-[200px] ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-[100px]"
-      } duration-[400ms] delay-100 ease-in`}
+      } duration-[400ms] delay-100 ease-in lg:px-0 md:px-[20px]`}
     >
-      <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
+      <h4 className="text-white-002 font-bold lg:text-[30px] md:text-[20px] mb-[16px]">
         키클롭스(CYCLOPS)
       </h4>
-      <div className="flex justify-between text-[24px]">
+      <div className="flex justify-between lg:text-[24px] md:text-[18px]">
         <span className="font-medium text-white-002">FE팀 개발 • 인턴</span>
         <span className="text-white-006">2024.07.01 ~ 2024.10.04</span>
       </div>
       <Divider />
-      <div className="text-white-004 flex flex-col font-medium text-[20px] leading-140 mb-[50px]">
+      <div className="text-white-004 flex flex-col font-medium lg:text-[20px] md:text-[17px] leading-140 lg:mb-[50px] md:mb-[30px]">
         <div className="flex mb-[8px]">
           <span className="mx-[12.5px]">•</span>
           <span>
@@ -102,7 +102,7 @@ export default function Experience2024({
             <span className="mx-[12.5px]">•</span>
             <span>충전형 포인트 관리 시스템 개발</span>
           </div>
-          <div className="flex flex-col text-[17px] leading-160 font-medium text-white-006 px-[33px]">
+          <div className="flex flex-col ld:text-[17px] md:text-[14px] leading-160 font-medium text-white-006 px-[33px]">
             <span>
               사업자가 포인트 시스템을 쉽게 이해하고 활용할 수 있도록 돕는
               프로모션 화면 개발

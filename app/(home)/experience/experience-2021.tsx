@@ -31,17 +31,17 @@ export default function Experience2021({
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-[100px]"
-      } duration-[400ms] delay-100 ease-in`}
+      } duration-[400ms] delay-100 ease-in  lg:px-0 md:px-[20px]`}
     >
-      <h4 className="text-white-002 font-bold text-[30px] mb-[16px]">
+      <h4 className="text-white-002 font-bold lg:text-[30px] md:text-[20px] mb-[16px]">
         조인트리 (JOINTREE)
       </h4>
-      <div className="flex justify-between text-[24px]">
+      <div className="flex justify-between lg:text-[24px] md:text-[18px]">
         <span className="font-medium text-white-002">SW개발팀 • 인턴</span>
         <span className="text-white-006">2021.08.01 ~ 2022.02.28</span>
       </div>
       <Divider />
-      <div className="text-white-004 flex flex-col font-medium text-[20px] leading-140 mb-[50px]">
+      <div className="text-white-004 flex flex-col font-medium lg:text-[20px] md:text-[17px] leading-140 lg:mb-[50px] md:mb-[30px]">
         <div className="flex mb-[8px]">
           <span className="mx-[12.5px]">•</span>
           <span>
