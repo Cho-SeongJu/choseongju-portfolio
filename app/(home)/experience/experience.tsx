@@ -38,7 +38,7 @@ export default function Experience({
       ref={experienceSectionRef}
       className="w-screen min-h-screen"
     >
-      <div className="flex justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] mx-auto md:w-[800px]">
+      <div className="flex justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] mx-auto md:w-[800px] lg:px-0 md:px-[20px]">
         <h3
           className={`sticky top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] md:text-[60px] leading-none ${
             isVisible

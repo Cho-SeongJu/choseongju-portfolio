@@ -42,7 +42,7 @@ export default function Experience2024({
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-[100px]"
-      } duration-[400ms] delay-100 ease-in lg:px-0 md:px-[20px]`}
+      } duration-[400ms] delay-100 ease-in`}
     >
       <h4 className="text-white-002 font-bold lg:text-[30px] md:text-[20px] mb-[16px]">
         키클롭스(CYCLOPS)
