@@ -22,7 +22,7 @@ export default function SideProject({ targetRef, setStep }: ISideProjectProps) {
   return (
     <section
       ref={targetRef}
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center w-screen"
     >
       <CrewPlay />
       <Jurin />

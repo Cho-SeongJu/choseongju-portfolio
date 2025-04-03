@@ -15,24 +15,24 @@ const TECH_STACK = [
 
 export default function CrewPlay() {
   return (
-    <div className="w-screen min-h-screen flex mx-auto justify-between pt-[155px] px-[200px] pb-[96px]">
-      <div className="flex flex-col justify-between w-[622px]">
+    <div className="flex justify-between xl:w-[1520px] lg:w-[1139px] md:w-[800px] min-h-screen pt-[160px] pb-[96px]">
+      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px]">
         <div>
           <div className="flex flex-col text-white-002">
-            <h2 className="font-bold text-[35px] mb-[10px]">
+            <h2 className="font-bold lg:text-[35px] md:text-[22px] mb-[10px]">
               크루플레이 (CREWPLAY)
             </h2>
-            <span className="font-medium text-[22px]">
+            <span className="font-medium lg:text-[22px] md:text-[18px]">
               KBO 야구 팬들을 위한 통합 플랫폼
             </span>
           </div>
-          <div className="text-[15px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
+          <div className="lg:text-[15px] md:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
             <span className="mb-[6px]">
               PM 2명 • UI/UX Designer 3명 • Front-End 1명 • Back-End 2명
             </span>
             <span>2024.12.01 - 2024.12.31</span>
           </div>
-          <div className="text-white-004 font-medium text-[14px]">
+          <div className="text-white-004 font-medium lg:text-[14px] md:text-[12px]">
             <div className="flex mb-[8px]">
               <span className="mx-[12.5px]">•</span>
               <span>
@@ -109,12 +109,13 @@ export default function CrewPlay() {
         </div>
       </div>
       <div className="flex flex-col">
-        <Image
-          alt="crew-play"
-          src="/image/crew-play.png"
-          width={669}
-          height={631}
-        />
+        <div className="flex flex-col xl:w-[669px] xl:h-[631px] lg:w-[500px] lg:h-[472px] md:w-[350px] md:h-[330.12px] relative">
+          <Image
+            alt="crew-play"
+            src="/image/crew-play.png"
+            fill
+          />
+        </div>
         <div className="flex items-center justify-center mt-[30px]">
           <Link
             href="https://github.com/crew-play/crewplay-FE"

@@ -15,22 +15,22 @@ const TECH_STACK = [
 
 export default function FootStep() {
   return (
-    <div className="flex mx-auto justify-between w-screen min-h-screen pt-[155px] px-[200px] pb-[96px]">
-      <div className="flex flex-col justify-between w-[622px]">
+    <div className="flex justify-between xl:w-[1520px] min-h-screen pt-[160px] pb-[96px]">
+      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px]">
         <div>
           <div className="flex flex-col text-white-002">
-            <h2 className="font-bold text-[35px] mb-[10px]">
+            <h2 className="font-bold lg:text-[35px] md:text-[22px] mb-[10px]">
               발자국 (FOOT-STEP)
             </h2>
-            <span className="font-medium text-[22px]">
+            <span className="font-medium lg:text-[22px] md:text-[18px]">
               지인들과 실시간으로 계획과 기록할 수 있는 여행 일정 서비스
             </span>
           </div>
-          <div className="text-[15px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
+          <div className="lg:text-[15px] md:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
             <span className="mb-[6px]">Front-End 2명 • Back-End 3명</span>
             <span>2023.06.27 - 2023.08.02</span>
           </div>
-          <div className="text-white-004 font-medium text-[14px]">
+          <div className="text-white-004 font-medium lg:text-[14px] md:text-[12px]">
             <div className="flex mb-[8px]">
               <span className="mx-[12.5px]">•</span>
               <span>
