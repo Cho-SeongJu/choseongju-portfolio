@@ -38,17 +38,17 @@ export default function Experience({
       ref={experienceSectionRef}
       className="w-screen min-h-screen"
     >
-      <div className="flex justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] mx-auto md:w-[800px] lg:px-0 md:px-[20px]">
+      <div className="flex md:flex-row xs:flex-col justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px] mx-auto lg:px-0 md:px-[20px]">
         <h3
-          className={`sticky top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] md:text-[60px] leading-none ${
+          className={`md:block xs:hidden md:sticky md:top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[100px]"
-          } duration-[400ms] delay-100 ease-in`}
+          } duration-[400ms] delay-100 ease-in xs:mb-[40px] md:mb-0`}
         >
           {experienceYear}
         </h3>
-        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px]">
+        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px] sm:w-[400px] xs:w-[320px]">
           <Experience2024
             experience2024Ref={experience2024Ref}
             setExperienceYear={setExperienceYear}
