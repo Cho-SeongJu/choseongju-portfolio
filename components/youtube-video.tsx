@@ -29,6 +29,10 @@ const ResponsiveYouTube = ({ videoId }: { videoId: string }) => {
         case 350:
           height = 330;
           break;
+        case 300:
+          height = 270;
+          break;
+
         default:
           height = (width * 9) / 16;
           break;
@@ -67,7 +71,7 @@ const ResponsiveYouTube = ({ videoId }: { videoId: string }) => {
   return (
     <div
       ref={containerRef}
-      className="xl:w-[669px] lg:w-[500px] md:w-[350px] rounded-[50px] overflow-hidden"
+      className="xl:w-[669px] lg:w-[500px] md:w-[350px] xs:w-[300px] rounded-[50px] overflow-hidden"
     >
       <YouTube
         key={`${videoId}-${youtubeSize.width}`}

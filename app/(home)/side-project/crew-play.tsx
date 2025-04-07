@@ -15,24 +15,24 @@ const TECH_STACK = [
 
 export default function CrewPlay() {
   return (
-    <div className="flex justify-between xl:w-[1520px] lg:w-[1139px] md:w-[800px] min-h-screen pt-[160px] pb-[96px]">
-      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px]">
+    <div className="flex md:flex-row xs:flex-col justify-between xl:w-[1520px] lg:w-[1139px] md:w-[800px] sm:w-[400px] xs:w-[320px] min-h-screen pt-[160px] pb-[96px]">
+      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px] xs:w-full">
         <div>
           <div className="flex flex-col text-white-002">
-            <h2 className="font-bold lg:text-[35px] md:text-[22px] mb-[10px]">
+            <h2 className="font-bold lg:text-[35px] xs:text-[22px] mb-[10px]">
               크루플레이 (CREWPLAY)
             </h2>
-            <span className="font-medium lg:text-[22px] md:text-[18px]">
+            <span className="font-medium lg:text-[22px] xs:text-[18px]">
               KBO 야구 팬들을 위한 통합 플랫폼
             </span>
           </div>
-          <div className="lg:text-[15px] md:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
+          <div className="lg:text-[15px] xs:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
             <span className="mb-[6px]">
               PM 2명 • UI/UX Designer 3명 • Front-End 1명 • Back-End 2명
             </span>
             <span>2024.12.01 - 2024.12.31</span>
           </div>
-          <div className="text-white-004 font-medium lg:text-[14px] md:text-[12px]">
+          <div className="text-white-004 font-medium lg:text-[14px] xs:text-[12px]">
             <div className="flex mb-[8px]">
               <span className="mx-[12.5px]">•</span>
               <span>
@@ -98,7 +98,7 @@ export default function CrewPlay() {
             </div>
           </div>
         </div>
-        <div className="mt-[40px]">
+        <div className="mt-[40px] md:mb-0 xs:mb-[50px]">
           {TECH_STACK.map((stack, index) => (
             <TechStackTag
               key={stack}
@@ -108,8 +108,8 @@ export default function CrewPlay() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="flex flex-col xl:w-[669px] xl:h-[631px] lg:w-[500px] lg:h-[472px] md:w-[350px] md:h-[330.12px] relative">
+      <div className="flex flex-col md:mx-0 xs:mx-auto">
+        <div className="flex flex-col xl:w-[669px] xl:h-[631px] lg:w-[500px] lg:h-[472px] sm:w-[350px] sm:h-[330.12px] xs:w-[300px] xs:h-[270px] relative">
           <Image
             alt="crew-play"
             src="/image/crew-play.png"
@@ -120,7 +120,7 @@ export default function CrewPlay() {
           <Link
             href="https://github.com/crew-play/crewplay-FE"
             target="_blank"
-            className="text-white-002 text-[18px] font-medium border-b border-white-002"
+            className="text-white-002 lg:text-[18px] xs:text-[14px] font-medium border-b border-white-002"
           >
             GitHub
           </Link>

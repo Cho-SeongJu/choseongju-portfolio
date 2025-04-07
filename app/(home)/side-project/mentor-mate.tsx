@@ -15,22 +15,22 @@ const TECH_STACK = [
 
 export default function MentorMate() {
   return (
-    <div className="flex justify-between xl:w-[1520px] lg:w-[1139px] md:w-[800px] min-h-screen pt-[160px] pb-[96px]">
-      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px]">
+    <div className="flex md:flex-row xs:flex-col justify-between xl:w-[1520px] lg:w-[1139px] md:w-[800px] sm:w-[400px] xs:w-[320px] min-h-screen pt-[160px] pb-[96px]">
+      <div className="flex flex-col xl:w-[622px] lg:w-[594px] md:w-[383px] xs:w-full">
         <div>
           <div className="flex flex-col text-white-002">
-            <h2 className="font-bold lg:text-[35px] md:text-[22px] mb-[10px]">
+            <h2 className="font-bold lg:text-[35px] xs:text-[22px] mb-[10px]">
               멘토메이트 (MENTORMATE)
             </h2>
-            <span className="font-medium lg:text-[22px] md:text-[18px]">
+            <span className="font-medium lg:text-[22px] xs:text-[18px]">
               자기주도 학습러를 위한 온라인 멘토 & 멘티 매칭 서비스
             </span>
           </div>
-          <div className="lg:text-[15px] md:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
+          <div className="lg:text-[15px] xs:text-[14px] text-white-006 flex flex-col mt-[20px] mb-[30px]">
             <span className="mb-[6px]">Front-End 2명 • Back-End 3명</span>
             <span>2023.10.02 - 2023.11.09</span>
           </div>
-          <div className="text-white-004 font-medium lg:text-[14px] md:text-[12px]">
+          <div className="text-white-004 font-medium lg:text-[14px] xs:text-[12px]">
             <div className="flex mb-[8px]">
               <span className="mx-[12.5px]">•</span>
               <span>
@@ -76,7 +76,7 @@ export default function MentorMate() {
             </div>
           </div>
         </div>
-        <div className="mt-[40px]">
+        <div className="mt-[40px] md:mb-0 xs:mb-[50px]">
           {TECH_STACK.map((stack, index) => (
             <TechStackTag
               key={stack}
@@ -86,13 +86,13 @@ export default function MentorMate() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col md:mx-0 xs:mx-auto">
         <YoutubeVideo videoId="lDah3XZUDsk" />
         <div className="flex items-center justify-center mt-[30px]">
           <Link
             href="https://github.com/JurinApp/FE_REPO"
             target="_blank"
-            className="text-white-002 text-[18px] font-medium border-b border-white-002"
+            className="text-white-002 lg:text-[18px] xs:text-[14px] font-medium border-b border-white-002"
           >
             GitHub
           </Link>
