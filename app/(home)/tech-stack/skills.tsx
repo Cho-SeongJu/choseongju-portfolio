@@ -29,34 +29,53 @@ export default function Skills({
 }: ISkillsProps) {
   const SKILL_ICON: ISkillIcon[] = useMemo(() => {
     return [
-      { name: "TypeScript", icon: <TypeScriptIcon /> },
+      {
+        name: "TypeScript",
+        icon: (
+          <TypeScriptIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
+      },
       {
         name: "Next.js",
-        icon: <NextJsIcon />,
+        icon: (
+          <NextJsIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "React-Query",
-        icon: <ReactQueryIcon />,
+        icon: (
+          <ReactQueryIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "JavaScript",
-        icon: <JavaScriptIcon />,
+        icon: (
+          <JavaScriptIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "Recoil",
-        icon: <RecoilIcon />,
+        icon: (
+          <RecoilIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "Vite",
-        icon: <ViteIcon />,
+        icon: (
+          <ViteIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "React",
-        icon: <ReactIcon />,
+        icon: (
+          <ReactIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
       {
         name: "Redux",
-        icon: <ReduxIcon />,
+        icon: (
+          <ReduxIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
       },
     ];
   }, []);
@@ -67,16 +86,16 @@ export default function Skills({
         selectedType === "skills" ? "bg-white-001" : "bg-black-003"
       } ${
         selectedType === "skills"
-          ? "py-[48px] lg:px-[76px] md:px-[50px]"
-          : "pt-[48px] px-[42px] lg:pb-[209px] md:pb-[222px]"
-      } rounded-[50px] flex flex-col cursor-pointer h-[571px]`}
+          ? "py-[48px] lg:px-[76px] md:px-[50px] md:h-[571px] xs:h-[461px]"
+          : "pt-[48px] px-[42px] lg:pb-[209px] md:pb-[222px] xs:pb-[33px] md:h-[571px] xs:h-[244px]"
+      } rounded-[50px] flex flex-col cursor-pointer md:mb-0 xs:mb-[24px] md:transition-none xs:transition-all duration-400`}
       onMouseEnter={() => setSelectedType("skills")}
     >
       <h3
         className={`${
           selectedType === "skills"
             ? "text-black-002 mb-[45px]"
-            : "text-gray-002 mb-[166px]"
+            : "text-gray-002 md:mb-[166px] xs:mb-[28px]"
         } font-bold lg:text-[30px] md:text-[20px] text-center`}
       >
         Front-End Skill

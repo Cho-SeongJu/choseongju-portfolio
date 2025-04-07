@@ -29,25 +29,45 @@ export default function StyleAndOther({
 }: ISkillsProps) {
   const STYLE_AND_OTHER_ICON: ISkillIcon[] = useMemo(() => {
     return [
-      { name: "CSS", icon: <CSSIcon /> },
-      { name: "Styled-Components", icon: <StyledComponentsIcon /> },
-      { name: "TailwindCSS", icon: <TailwindCSSIcon /> },
+      {
+        name: "CSS",
+        icon: (
+          <CSSIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
+      },
+      {
+        name: "Styled-Components",
+        icon: (
+          <StyledComponentsIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
+      },
+      {
+        name: "TailwindCSS",
+        icon: (
+          <TailwindCSSIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
+      },
       {
         name: "Git, GitHub",
         icon: (
           <div className="flex">
-            <GitIcon />
-            <GitHubIcon />
+            <GitIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+            <GitHubIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
           </div>
         ),
       },
-      { name: "Vercel", icon: <VercelIcon /> },
+      {
+        name: "Vercel",
+        icon: (
+          <VercelIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+        ),
+      },
       {
         name: "AWS + S3",
         icon: (
           <div className="flex">
-            <AWSIcon />
-            <S3Icon />
+            <AWSIcon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
+            <S3Icon className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] xs:w-[38px] xs:h-[38px]" />
           </div>
         ),
       },
@@ -56,20 +76,20 @@ export default function StyleAndOther({
 
   return (
     <div
-      className={`ml-[24px] ${
+      className={`md:ml-[24px] ${
         selectedType === "styleAndOther" ? "bg-white-001" : "bg-black-003"
       } ${
         selectedType === "styleAndOther"
-          ? "py-[48px] lg:px-[76px] md:px-[50px]"
-          : "pt-[48px] px-[42px] lg:pb-[209px] md:pb-[222px]"
-      } rounded-[50px] flex flex-col cursor-pointer h-[571px]`}
+          ? "py-[48px] lg:px-[76px] md:px-[50px] md:h-[571px] xs:h-[461px]"
+          : "pt-[48px] px-[42px] lg:pb-[209px] md:pb-[222px] xs:pb-[33px] md:h-[571px] xs:h-[244px]"
+      } rounded-[50px] flex flex-col cursor-pointer md:transition-none xs:transition-all duration-400`}
       onMouseEnter={() => setSelectedType("styleAndOther")}
     >
       <h3
         className={`${
           selectedType === "styleAndOther"
             ? "text-black-002 mb-[45px]"
-            : "text-gray-002 mb-[166px]"
+            : "text-gray-002 md:mb-[166px] xs:mb-[28px]"
         } font-bold lg:text-[30px] md:text-[20px] text-center`}
       >
         Styles & Others

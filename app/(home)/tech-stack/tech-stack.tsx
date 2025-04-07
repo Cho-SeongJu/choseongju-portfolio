@@ -32,9 +32,9 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
       ref={targetRef}
       className="flex justify-center items-center w-screen min-h-screen text-white-002 pt-[124px] pb-[175px]"
     >
-      <div className="xl:w-[1520px] lg:w-[1140px] md:w-[800px]">
+      <div className="xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px]">
         <h2
-          className={`font-bold lg:text-[50px] md:text-[30px] mb-[65px] ${
+          className={`font-bold lg:text-[50px] xs:text-[30px] mb-[65px] ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-[100px]"
@@ -43,7 +43,7 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
           Skill
         </h2>
         <div
-          className={`flex ${
+          className={`flex md:flex-row xs:flex-col ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[100px]"
