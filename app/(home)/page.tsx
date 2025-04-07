@@ -39,8 +39,36 @@ export default function Home() {
       }
     };
 
+    let touchStartY = 0;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffY = touchStartY - touchEndY;
+
+      if (step === "intro" && diffY > 50) {
+        // 아래로 스크롤한 경우
+        setStep("about");
+      }
+
+      if (step === "about" && diffY < -50 && window.scrollY === 0) {
+        // 위로 스크롤한 경우
+        setStep("intro");
+      }
+    };
+
     window.addEventListener("wheel", handleWheel);
-    return () => window.removeEventListener("wheel", handleWheel);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
   }, [step]);
 
   return (
