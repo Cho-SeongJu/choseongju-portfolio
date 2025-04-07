@@ -28,7 +28,7 @@ export default function Experience({
   useObserver({
     targetRef: experienceSectionRef,
     changeStep: "experience",
-    threshold: 0.1,
+    threshold: 0.01,
     setStep,
     setIsVisible: changeVisible,
   });

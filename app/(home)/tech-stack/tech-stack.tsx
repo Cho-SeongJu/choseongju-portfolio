@@ -23,6 +23,7 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
     targetRef,
     changeStep: "skill",
     setStep,
+    rootMargin: "100px 0px 100px 0px",
     threshold: 0.4,
     setIsVisible: changeVisible,
   });

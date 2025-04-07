@@ -19,7 +19,8 @@ export default function Experience2021({
   useObserver({
     targetRef: experience2021Ref,
     changeStep: "experience",
-    threshold: 0.2,
+    threshold: 0.3,
+    rootMargin: "60px 0px 60px 0px",
     setExperienceYear,
     experienceYear: 2021,
   });

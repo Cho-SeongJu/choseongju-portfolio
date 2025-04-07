@@ -4,6 +4,7 @@ import { Dispatch, RefObject, SetStateAction, useEffect } from "react";
 interface IUseObserverProps {
   readonly targetRef: RefObject<HTMLElement | null>;
   readonly changeStep: TStep;
+  readonly rootMargin?: string;
   readonly threshold: number;
   readonly setStep?: Dispatch<SetStateAction<TStep>>;
   readonly setExperienceYear?: Dispatch<SetStateAction<number>>;
@@ -15,6 +16,7 @@ export default function useObserver({
   targetRef,
   changeStep,
   threshold,
+  rootMargin = "0px 0px 0px 0px",
   setStep,
   setExperienceYear,
   setIsVisible,
@@ -37,7 +39,7 @@ export default function useObserver({
           }
         }
       },
-      { threshold }
+      { threshold, rootMargin }
     );
 
     if (targetRef.current) {
