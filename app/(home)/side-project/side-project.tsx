@@ -16,7 +16,7 @@ export default function SideProject({ targetRef, setStep }: ISideProjectProps) {
     targetRef,
     changeStep: "project",
     setStep,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (

@@ -19,14 +19,20 @@ export default function Experience2021({
   useObserver({
     targetRef: experience2021Ref,
     changeStep: "experience",
-    threshold: 0.8,
+    threshold: 0.2,
     setExperienceYear,
     experienceYear: 2021,
   });
 
   return (
     <>
-      <h3 className="md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none xs:mb-[40px] md:mb-0">
+      <h3
+        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none xs:mb-[40px] md:mb-0  ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[100px]"
+        } duration-[400ms] delay-100 ease-in`}
+      >
         2021
       </h3>
       <div

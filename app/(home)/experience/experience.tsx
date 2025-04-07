@@ -28,7 +28,7 @@ export default function Experience({
   useObserver({
     targetRef: experienceSectionRef,
     changeStep: "experience",
-    threshold: 0.2,
+    threshold: 0.1,
     setStep,
     setIsVisible: changeVisible,
   });
@@ -38,7 +38,7 @@ export default function Experience({
       ref={experienceSectionRef}
       className="w-screen min-h-screen"
     >
-      <div className="flex md:flex-row xs:flex-col justify-between pt-[120px] xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px] mx-auto lg:px-0 md:px-[20px]">
+      <div className="flex md:flex-row xs:flex-col justify-between xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px] mx-auto lg:px-0 md:px-[20px]">
         <h3
           className={`md:block xs:hidden md:sticky md:top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none ${
             isVisible
