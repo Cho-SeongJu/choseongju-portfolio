@@ -13,9 +13,9 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
   return (
     <header className="fixed top-0 w-full z-[999]">
       <div
-        className={`items-center flex justify-evenly w-full h-[80px] mx-auto ${
+        className={`items-center flex lg:justify-evenly xs:flex-row-reverse w-full mx-auto h-[80px] ${
           step === "intro" ? "translate-y-[-80px]" : "translate-y-0"
-        } bg-black-002 intro-animation px-[60px]`}
+        } bg-black-002 intro-animation`}
       >
         <HeaderMenu
           refObject={refObject}

@@ -38,7 +38,7 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
           className={`font-bold lg:text-[50px] xs:text-[30px] mb-[65px] ${
             isVisible
               ? "opacity-100 md:translate-x-0 xs:translate-y-0"
-              : "opacity-0 md:translate-x-[100px] xs:translate-y-[100px]"
+              : "opacity-0 md:translate-x-[50px] xs:translate-y-[100px]"
           } duration-[350ms] delay-100 ease-in text-center`}
         >
           Skill

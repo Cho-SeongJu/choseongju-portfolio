@@ -2,6 +2,7 @@ import LinkIcon from "@/components/link-icon";
 import { TStep } from "@/interface/common";
 import Link from "next/link";
 import { Dispatch, RefObject, SetStateAction } from "react";
+import Hamburger from "@/public/svg/hamburger.svg";
 
 interface IHeaderProps {
   readonly step: string;
@@ -84,51 +85,56 @@ export default function HeaderMenu({ step, refObject, setStep }: IHeaderProps) {
   };
 
   return (
-    <div className="flex w-full max-w-[1520px]">
-      <ul
-        className={`${
-          step === "intro" ? "translate-y-[-100px]" : "translate-y-0"
-        } intro-animation flex`}
-      >
-        {MENU.section.map((sectionMenu, index) => (
-          <li
-            key={sectionMenu.text}
-            className={`text-[16px] cursor-pointer transition-colors duration-200 ${
-              index < 4 && "mr-[36px]"
-            } ${
-              sectionMenu.step === step
-                ? "text-white-001"
-                : "text-white-006 hover:text-white-003"
-            }`}
-            onClick={sectionMenu.onClick}
-          >
-            {sectionMenu.text}
-          </li>
-        ))}
-      </ul>
-      <div className="grow" />
-      <ul
-        className={`${
-          step === "intro" ? "translate-y-[-100px]" : "translate-y-0"
-        } intro-animation flex`}
-      >
-        {MENU.link.map((linkMenu, index) => (
-          <li
-            key={linkMenu.text}
-            className={`text-white-006 text-[16px] cursor-pointer flex items-center hover:text-white-001 transition-colors duration-200 ${
-              index === 0 && "mr-[36px]"
-            }`}
-          >
-            <Link
-              href={linkMenu.href}
-              target="_blank"
+    <>
+      <div className="lg:flex xs:hidden xl:w-[1520px] lg:w-[1200px] md:w-[800px] px-[20px]">
+        <ul
+          className={`${
+            step === "intro" ? "translate-y-[-100px]" : "translate-y-0"
+          } intro-animation flex`}
+        >
+          {MENU.section.map((sectionMenu, index) => (
+            <li
+              key={sectionMenu.text}
+              className={`text-[16px] cursor-pointer transition-colors duration-200 ${
+                index < 4 && "mr-[36px]"
+              } ${
+                sectionMenu.step === step
+                  ? "text-white-001"
+                  : "text-white-006 hover:text-white-003"
+              }`}
+              onClick={sectionMenu.onClick}
             >
-              {linkMenu.text}
-            </Link>
-            <LinkIcon />
-          </li>
-        ))}
-      </ul>
-    </div>
+              {sectionMenu.text}
+            </li>
+          ))}
+        </ul>
+        <div className="grow" />
+        <ul
+          className={`${
+            step === "intro" ? "translate-y-[-100px]" : "translate-y-0"
+          } intro-animation flex`}
+        >
+          {MENU.link.map((linkMenu, index) => (
+            <li
+              key={linkMenu.text}
+              className={`text-white-006 text-[16px] cursor-pointer flex items-center hover:text-white-001 transition-colors duration-200 ${
+                index === 0 && "mr-[36px]"
+              }`}
+            >
+              <Link
+                href={linkMenu.href}
+                target="_blank"
+              >
+                {linkMenu.text}
+              </Link>
+              <LinkIcon />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="w-[24px] h-[24px] lg:hidden xs:flex justify-center items-center sm:mr-[40px] xs:mr-[10px]">
+        <Hamburger className="w-[16px] h-[10px]" />
+      </div>
+    </>
   );
 }

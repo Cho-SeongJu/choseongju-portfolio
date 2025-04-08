@@ -7,11 +7,12 @@ interface ILogo {
 export default function Logo({ step }: ILogo) {
   return (
     <div
-      className={`${
-        step === "intro"
-          ? "w-full xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] xs:translate-y-[calc(100vh-100%-200px)]"
-          : "pb-0 w-[170px] translate-y-[16px]"
-      } absolute top-0 left-[50%] translate-x-[-50%] font-title mx-auto text-center text-white-001 intro-animation transition-all`}
+      className={` absolute top-0 lg:left-[50%] lg:translate-x-[-50%] font-title mx-auto text-center text-white-001 intro-animation transition-all 
+        ${
+          step === "intro"
+            ? "w-full xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] xs:translate-y-[calc(100vh-100%-200px)]"
+            : "pb-0 sm:w-[170px] xs:w-[125.4px] translate-y-[16px] sm:left-[40px] xs:left-[10px]"
+        }`}
     >
       <h1 className={`${step !== "intro" && "mx-auto"} intro-animation`}>
         <span

@@ -72,6 +72,18 @@ html {
     -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
   }
 
+  @media screen and (max-width: 800px) {
+    .text-stroke-intro {
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .text-stroke-intro {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    }
+  }
+
   .text-stroke {
     -webkit-text-stroke: 0.34px rgba(255, 255, 255, 0.9);
   }
