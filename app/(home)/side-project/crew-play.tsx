@@ -1,7 +1,7 @@
 import TechStackTag from "@/components/tech-stack-tag";
 import Image from "next/image";
 import Link from "next/link";
-import PlayIcon from "@/public/play.svg";
+import PlayIcon from "@/public/svg/play.svg";
 
 const TECH_STACK = [
   "React",

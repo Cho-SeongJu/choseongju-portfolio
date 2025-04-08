@@ -1,4 +1,4 @@
-import PlayIcon from "@/public/play.svg";
+import PlayIcon from "@/public/svg/play.svg";
 
 export default function ViewText() {
   return (

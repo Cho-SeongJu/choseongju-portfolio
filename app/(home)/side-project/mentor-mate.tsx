@@ -1,6 +1,6 @@
 import TechStackTag from "@/components/tech-stack-tag";
 import YoutubeVideo from "@/components/youtube-video";
-import PlayIcon from "@/public/play.svg";
+import PlayIcon from "@/public/svg/play.svg";
 import Link from "next/link";
 
 const TECH_STACK = [
