@@ -1,4 +1,4 @@
-import { TStep } from "@/interface/common";
+import { IMenu, TStep } from "@/interface/common";
 import Link from "next/link";
 import { Dispatch, RefObject, SetStateAction } from "react";
 import LinkIcon from "@/components/link-icon";
@@ -7,18 +7,6 @@ interface IHeaderProps {
   readonly step: string;
   readonly refObject: { [key: string]: RefObject<HTMLElement | null> };
   readonly setStep: Dispatch<SetStateAction<TStep>>;
-}
-
-interface IMenu {
-  readonly section: {
-    readonly text: Uppercase<TStep>;
-    readonly step: TStep;
-    readonly onClick: () => void;
-  }[];
-  readonly link: {
-    readonly text: "GITHUB" | "NOTION";
-    readonly href: string;
-  }[];
 }
 
 export default function NavBar({ step, refObject, setStep }: IHeaderProps) {

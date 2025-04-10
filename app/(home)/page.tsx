@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "@/app/(home)/header/header";
+import Scroll from "@/components/scroll";
 import { TStep } from "@/interface/common";
 import { useEffect, useRef, useState } from "react";
 import AboutMe from "./about-me/about-me";
@@ -8,7 +9,6 @@ import AboutMeDeveloper from "./about-me/about-me-developer";
 import Experience from "./experience/experience";
 import SideProject from "./side-project/side-project";
 import TechStack from "./tech-stack/tech-stack";
-import Scroll from "@/components/scroll";
 
 export default function Home() {
   const [step, setStep] = useState<TStep>("intro");

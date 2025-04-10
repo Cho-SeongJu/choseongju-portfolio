@@ -7,9 +7,15 @@ interface IHeaderProps {
   readonly step: string;
   readonly refObject: { [key: string]: RefObject<HTMLElement | null> };
   readonly setStep: Dispatch<SetStateAction<TStep>>;
+  readonly setIsOpenDrawer: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function HeaderMenu({ step, refObject, setStep }: IHeaderProps) {
+export default function HeaderMenu({
+  step,
+  refObject,
+  setStep,
+  setIsOpenDrawer,
+}: IHeaderProps) {
   return (
     <>
       <NavBar
@@ -17,7 +23,7 @@ export default function HeaderMenu({ step, refObject, setStep }: IHeaderProps) {
         refObject={refObject}
         setStep={setStep}
       />
-      <MenuToggle />
+      <MenuToggle setIsOpenDrawer={setIsOpenDrawer} />
     </>
   );
 }
