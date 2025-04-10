@@ -17,7 +17,14 @@ export default function Drawer({
 }: IDrawerProps) {
   const MENU: IMenu = {
     section: [
-      { text: "INTRO", step: "intro", onClick: () => setStep("intro") },
+      {
+        text: "INTRO",
+        step: "intro",
+        onClick: () => {
+          setStep("intro");
+          setIsOpenDrawer(false);
+        },
+      },
       {
         text: "ABOUT",
         step: "about",

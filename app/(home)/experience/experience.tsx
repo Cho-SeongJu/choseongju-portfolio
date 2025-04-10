@@ -48,7 +48,7 @@ export default function Experience({
         >
           {experienceYear}
         </h3>
-        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px] sm:w-[400px] xs:w-[320px]">
+        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px] sm:w-[400px] xs:w-[320px] pt-[120px]">
           <Experience2024
             experience2024Ref={experience2024Ref}
             setExperienceYear={setExperienceYear}

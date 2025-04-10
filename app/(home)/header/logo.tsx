@@ -14,7 +14,11 @@ export default function Logo({ step }: ILogo) {
             : "pb-0 sm:w-[170px] xs:w-[125.4px] translate-y-[16px] sm:left-[40px] xs:left-[10px]"
         }`}
     >
-      <h1 className={`${step !== "intro" && "mx-auto"} intro-animation`}>
+      <h1
+        className={`${
+          step !== "intro" && "mx-auto"
+        } intro-animation flex flex-col`}
+      >
         <span
           className={`${
             step === "intro"

@@ -31,7 +31,7 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
   return (
     <section
       ref={targetRef}
-      className="flex justify-center items-center w-screen min-h-screen text-white-002"
+      className="flex justify-center items-center w-screen min-h-screen text-white-002 pt-[120px]"
     >
       <div className="xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px]">
         <h2
