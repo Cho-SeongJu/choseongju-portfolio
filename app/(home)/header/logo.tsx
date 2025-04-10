@@ -10,7 +10,7 @@ export default function Logo({ step }: ILogo) {
       className={` absolute top-0 lg:left-[50%] lg:translate-x-[-50%] font-title mx-auto text-center text-white-001 intro-animation transition-all 
         ${
           step === "intro"
-            ? "w-full xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] xs:translate-y-[calc(100vh-100%-200px)]"
+            ? "w-full xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] md:translate-y-[calc(100vh-100%-200px)] sm:translate-y-[calc(100vh-100%-250px)] xs:translate-y-[calc(100vh-100%-320px)]"
             : "pb-0 sm:w-[170px] xs:w-[125.4px] translate-y-[16px] sm:left-[40px] xs:left-[10px]"
         }`}
     >

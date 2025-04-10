@@ -104,7 +104,7 @@ export default function Drawer({
   }, []);
 
   return (
-    <div className="w-screen h-screen absolute top-0 left-0 z-[1000] flex flex-col bg-black-001 text-white-003 text-[22px] font-semibold">
+    <div className="w-screen h-screen absolute top-0 left-0 z-[1000] flex flex-col bg-black-001 text-white-003 text-[22px] font-semibold pb-[40px]">
       <div className="h-[60px] flex items-center flex-row-reverse mr-[20px]">
         <button
           type="button"
