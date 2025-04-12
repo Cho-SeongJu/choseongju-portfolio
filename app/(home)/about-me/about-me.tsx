@@ -1,6 +1,6 @@
 import useObserver from "@/hooks/useObserver";
 import { TStep } from "@/interface/common";
-import { Dispatch, RefObject, SetStateAction } from "react";
+import { Dispatch, RefObject, SetStateAction, useEffect } from "react";
 
 interface IAboutMeProps {
   readonly targetRef: RefObject<HTMLElement | null>;
@@ -9,6 +9,32 @@ interface IAboutMeProps {
 
 export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
   useObserver({ targetRef, changeStep: "about", setStep, threshold: 0.8 });
+
+  useEffect(() => {
+    let scrollBlocked = true;
+
+    const handleTouchEnd = () => {
+      if (scrollBlocked) {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+
+    document.addEventListener("touchend", handleTouchEnd, { passive: false });
+
+    const timer = setTimeout(() => {
+      scrollBlocked = false;
+      document.body.style.overflow = "";
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = "";
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
 
   return (
     <>
