@@ -112,7 +112,7 @@ export default function CrewPlay() {
         <div className="flex flex-col xl:w-[669px] xl:h-[631px] lg:w-[500px] lg:h-[472px] sm:w-[350px] sm:h-[330.12px] xs:w-[300px] xs:h-[270px] relative">
           <Image
             alt="crew-play"
-            src="/image/crew-play.png"
+            src={`/image/crew-play.png?v=${new Date().getTime()}`}
             fill
           />
         </div>
