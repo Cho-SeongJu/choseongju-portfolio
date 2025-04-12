@@ -1,6 +1,6 @@
 export default function Scroll() {
   return (
-    <div className="flex flex-col fixed bottom-[86px] items-center justify-center mx-auto opacity-0 fade-in-animation left-1/2 translate-x-[-50%]">
+    <div className="flex flex-col fixed bottom-[40px] items-center justify-center mx-auto opacity-0 fade-in-animation left-1/2 translate-x-[-50%]">
       <span className="text-white-001 font-medium text-[14px] leading-150 mb-[10px]">
         Scroll to Explore
       </span>
