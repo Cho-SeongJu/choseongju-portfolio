@@ -114,7 +114,7 @@ export default function Drawer({
           <Exit />
         </button>
       </div>
-      <div className="mt-[10px] flex flex-col px-[20px] justify-between h-full">
+      <div className="mt-[10px] flex flex-col px-[20px] h-full">
         <ul>
           {MENU.section.map((sectionMenu) => (
             <li
@@ -126,7 +126,7 @@ export default function Drawer({
             </li>
           ))}
         </ul>
-        <div>
+        <div className="mt-[30px]">
           {MENU.link.map((linkMenu) => (
             <Link
               href={linkMenu.href}
