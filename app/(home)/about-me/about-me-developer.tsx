@@ -22,7 +22,7 @@ export default function AboutMeDeveloper({
   return (
     <section
       ref={targetRef}
-      className="flex items-center justify-center md:h-screen xs:xs:h-[calc(100vh-120px)] w-screen"
+      className="flex items-center justify-center md:h-screen xs:xs:h-[calc(100vh-120px)] w-screen md:px-0 xs:px-[5px]"
     >
       <div className="flex flex-col text-white-002 font-bold">
         <div className="flex mb-[24px] items-center">
@@ -30,7 +30,7 @@ export default function AboutMeDeveloper({
             저는
           </span>
           <Swiper
-            className="xl:text-[45px] md:text-[40px] sm:text-[20px] xs:text-[16px] xl:w-[550px] md:w-[506px] sm:w-[280px] xs:w-[216px] xl:px-[28px] md:px-[33.5px] sm:px-[30px] xs:px-[20px] md:h-[90px] sm:h-[57.5px] xs:h-[43px] about-me-border bg-gray-001 lg:mx-[18px]! xs:mx-[10px]! sm:rounded-[20px] xs:rounded-[10px]"
+            className="xl:text-[45px] md:text-[40px] sm:text-[20px] xs:text-[16px] xl:w-[550px] md:w-[506px] sm:w-[250px] xs:w-[200px] xl:px-[28px] md:px-[33.5px] sm:px-[30px] xs:px-[20px] md:h-[90px] sm:h-[57.5px] xs:h-[43px] about-me-border bg-gray-001 lg:mx-[18px]! xs:mx-[10px]! sm:rounded-[20px] xs:rounded-[10px]"
             direction="vertical"
             autoplay={{ delay: 1500, disableOnInteraction: false }}
             loop

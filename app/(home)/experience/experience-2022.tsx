@@ -28,7 +28,7 @@ export default function Experience2022({
   return (
     <>
       <h3
-        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[45px] leading-none xs:mb-[40px] md:mb-0  ${
+        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[45px] leading-none xs:mb-[40px] md:mb-0 md:px-0 xs:px-[10px] ${
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[100px]"
@@ -38,7 +38,7 @@ export default function Experience2022({
       </h3>
       <div
         ref={experience2022Ref}
-        className={`pb-[200px] ${
+        className={`pb-[200px] md:px-0 xs:px-[10px] ${
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[100px]"

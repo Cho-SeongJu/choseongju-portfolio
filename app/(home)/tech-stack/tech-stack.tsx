@@ -48,7 +48,7 @@ export default function TechStack({ targetRef, setStep }: ITechStackProps) {
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[100px]"
-          } duration-[350ms] delay-100 ease-in`}
+          } duration-[350ms] delay-100 ease-in md:px-0 xs:px-[10px]`}
         >
           <Skills
             selectedType={selectedType}

@@ -28,7 +28,7 @@ export default function Experience2021({
   return (
     <>
       <h3
-        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[45px] leading-none xs:mb-[40px] md:mb-0  ${
+        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[45px] leading-none xs:mb-[40px] md:mb-0 md:px-0 xs:px-[10px] ${
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[100px]"
@@ -42,7 +42,7 @@ export default function Experience2021({
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[100px]"
-        } duration-[400ms] delay-100 ease-in`}
+        } duration-[400ms] delay-100 ease-in md:px-0 xs:px-[10px]`}
       >
         <h4 className="text-white-002 font-bold lg:text-[30px] xs:text-[20px] mb-[16px]">
           조인트리 (JOINTREE)
