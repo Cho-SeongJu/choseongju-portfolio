@@ -29,11 +29,7 @@ export default function Drawer({
         text: "ABOUT",
         step: "about",
         onClick: () => {
-          refObject.aboutMeSectionRef.current?.scrollIntoView({
-            block: "start",
-            inline: "start",
-            behavior: "smooth",
-          });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setStep("about");
           setIsOpenDrawer(false);
         },

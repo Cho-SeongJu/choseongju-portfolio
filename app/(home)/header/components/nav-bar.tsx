@@ -17,11 +17,7 @@ export default function NavBar({ step, refObject, setStep }: IHeaderProps) {
         text: "ABOUT",
         step: "about",
         onClick: () => {
-          refObject.aboutMeSectionRef.current?.scrollIntoView({
-            block: "start",
-            inline: "nearest",
-            behavior: "smooth",
-          });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setStep("about");
         },
       },
