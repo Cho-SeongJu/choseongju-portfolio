@@ -22,7 +22,7 @@ export default function AboutMeDeveloper({
   return (
     <section
       ref={targetRef}
-      className="flex items-center justify-center h-screen w-screen"
+      className="flex items-center justify-center md:h-screen xs:xs:h-[calc(100vh-120px)] w-screen"
     >
       <div className="flex flex-col text-white-002 font-bold">
         <div className="flex mb-[24px] items-center">

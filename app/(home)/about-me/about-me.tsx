@@ -40,7 +40,7 @@ export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
     <>
       <section
         ref={targetRef}
-        className="text-white-002 w-screen h-screen flex items-center justify-center"
+        className="text-white-002 w-screen md:h-screen xs:h-[calc(100vh-120px)] flex items-center justify-center"
       >
         <div className="flex flex-col text-center xl:w-[789px] md:w-[657px] sm:w-[400px] xs:w-[320px]">
           <div className="flex overflow-hidden mx-auto">

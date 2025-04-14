@@ -12,10 +12,10 @@ export default function MenuToggle({ setIsOpenDrawer }: IMenuToggleProps) {
 
   return (
     <div
-      className="w-[24px] h-[24px] lg:hidden xs:flex justify-center items-center sm:mr-[40px] xs:mr-[10px] rounded-full cursor-pointer hover:bg-gray-800 transition-colors duration-300"
+      className="w-[24px] h-[24px] lg:hidden xs:flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-800 transition-colors duration-300 md:mr-0 sm:mr-[40px] xs:mr-[10px]"
       onClick={handleClickMenuToggle}
     >
-      <Hamburger className="w-[16px] h-[10px]" />
+      <Hamburger className="w-[30px] h-[30px]" />
     </div>
   );
 }

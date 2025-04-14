@@ -4,14 +4,16 @@ interface ILogo {
   readonly step: TStep;
 }
 
+// xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] md:translate-y-[calc(100vh-100%-190px)] sm:translate-y-[calc(100vh-100%-250px)] xs:translate-y-[calc(100vh-100%-320px)]
+
 export default function Logo({ step }: ILogo) {
   return (
     <div
-      className={` absolute top-0 lg:left-[50%] lg:translate-x-[-50%] font-title mx-auto text-center text-white-001 intro-animation transition-all 
+      className={`absolute top-0 lg:left-[50%] lg:translate-x-[-50%] font-title mx-auto text-center text-white-001 intro-animation transition-all 
         ${
           step === "intro"
-            ? "w-full xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] md:translate-y-[calc(100vh-100%-200px)] sm:translate-y-[calc(100vh-100%-250px)] xs:translate-y-[calc(100vh-100%-320px)]"
-            : "pb-0 sm:w-[170px] xs:w-[125.4px] sm:translate-y-[16px] xs:translate-y-[25px] sm:left-[40px] xs:left-[10px]"
+            ? "w-full translate-y-[calc(60vh-50%)]"
+            : "pb-0 sm:w-[170px] xs:w-[125.4px] sm:translate-y-[16px] xs:translate-y-[25px] lg:left-0 md:left-[calc(50vw-400px)] sm:left-[40px] xs:left-[10px]"
         }`}
     >
       <h1

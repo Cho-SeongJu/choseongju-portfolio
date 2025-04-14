@@ -30,18 +30,20 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
   return (
     <header className="fixed top-0 w-full z-[999]">
       <div
-        className={`items-center flex lg:justify-evenly xs:flex-row-reverse w-full mx-auto h-[80px] ${
+        className={`flex w-full mx-auto h-[80px] ${
           step === "intro" ? "translate-y-[-80px]" : "translate-y-0"
-        } bg-black-002 intro-animation`}
+        } intro-animation bg-black-002`}
       >
-        <HeaderMenu
-          refObject={refObject}
-          step={step}
-          setStep={setStep}
-          setIsOpenDrawer={setIsOpenDrawer}
-        />
+        <div className="lg:w-full md:w-[800px] xs:w-full items-center flex lg:justify-evenly xs:flex-row-reverse mx-auto">
+          <HeaderMenu
+            refObject={refObject}
+            step={step}
+            setStep={setStep}
+            setIsOpenDrawer={setIsOpenDrawer}
+          />
+        </div>
+        <Logo step={step} />
       </div>
-      <Logo step={step} />
       {isOpenDrawer && (
         <Drawer
           setIsOpenDrawer={setIsOpenDrawer}
