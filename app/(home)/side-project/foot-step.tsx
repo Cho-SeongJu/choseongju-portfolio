@@ -77,7 +77,7 @@ export default function FootStep() {
         <YoutubeVideo videoId="hgY-RED-7X8" />
         <div className="flex items-center justify-center mt-[30px]">
           <Link
-            href="https://github.com/JurinApp/FE_REPO"
+            href="https://github.com/FootStepteam/footstep_FE"
             target="_blank"
             className="text-white-002 lg:text-[18px] xs:text-[14px] font-medium border-b border-white-002"
           >
