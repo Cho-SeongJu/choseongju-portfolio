@@ -28,7 +28,7 @@ export default function Header({ step, refObject, setStep }: IHeaderProps) {
   }, [isOpenDrawer]);
 
   return (
-    <header className="sticky top-0 w-full z-[999]">
+    <header className="fixed top-0 w-full z-[999]">
       <div
         className={`flex w-full mx-auto h-[80px] ${
           step === "intro" ? "translate-y-[-80px]" : "translate-y-0"
