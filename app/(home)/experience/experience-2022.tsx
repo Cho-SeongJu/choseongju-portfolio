@@ -28,7 +28,7 @@ export default function Experience2022({
   return (
     <>
       <h3
-        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none xs:mb-[40px] md:mb-0  ${
+        className={`md:hidden sm:block font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[45px] leading-none xs:mb-[40px] md:mb-0  ${
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[100px]"
@@ -54,7 +54,7 @@ export default function Experience2022({
           <span className="text-white-006">2022.05.01 ~ 2022.12.31</span>
         </div>
         <Divider />
-        <div className="text-white-004 flex flex-col font-medium lg:text-[20px] sm:text-[17px] xs:text-[16px] leading-140 lg:mb-[50px] md:mb-[30px] xs:mb-[50px]">
+        <div className="text-white-004 flex flex-col lg:text-[20px] sm:text-[16px] xs:text-[16px] leading-140 lg:mb-[50px] md:mb-[30px] xs:mb-[50px]">
           <div className="flex mb-[8px]">
             <span className="mx-[12.5px]">•</span>
             <span>

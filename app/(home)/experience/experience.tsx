@@ -38,7 +38,7 @@ export default function Experience({
       ref={experienceSectionRef}
       className="w-screen min-h-screen"
     >
-      <div className="flex md:flex-row xs:flex-col justify-between xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px] mx-auto lg:px-0 md:px-[20px]">
+      <div className="flex md:flex-row xs:flex-col justify-between xl:w-[1520px] lg:w-[1140px] md:w-[800px] sm:w-[400px] xs:w-[320px] mx-auto lg:px-0 md:px-[20px] pt-[120px]">
         <h3
           className={`md:block xs:hidden md:sticky md:top-[120px] self-start font-title text-white-002 xl:text-[160px] lg:text-[100px] sm:text-[60px] xs:text-[30px] leading-none ${
             isVisible
@@ -48,7 +48,7 @@ export default function Experience({
         >
           {experienceYear}
         </h3>
-        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px] sm:w-[400px] xs:w-[320px] pt-[120px]">
+        <div className="min-h-screen xl:w-[878px] lg:w-[823px] md:w-[482px] sm:w-[400px] xs:w-[320px] xl:pt-[20px] lg:pt-[10px]">
           <Experience2024
             experience2024Ref={experience2024Ref}
             setExperienceYear={setExperienceYear}
