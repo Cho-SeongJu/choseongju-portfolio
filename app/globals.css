@@ -16,6 +16,11 @@ html {
   line-height: 1.3;
 }
 
+.scroll-none {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+
 @theme {
   /* Font */
   --font-title: "Helvetica Neue", sans-serif;
