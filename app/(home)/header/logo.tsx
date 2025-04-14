@@ -4,8 +4,6 @@ interface ILogo {
   readonly step: TStep;
 }
 
-// xl:translate-y-[calc(100vh-100%-160px)] lg:translate-y-[calc(100vh-100%-180px)] md:translate-y-[calc(100vh-100%-190px)] sm:translate-y-[calc(100vh-100%-250px)] xs:translate-y-[calc(100vh-100%-320px)]
-
 export default function Logo({ step }: ILogo) {
   return (
     <div
