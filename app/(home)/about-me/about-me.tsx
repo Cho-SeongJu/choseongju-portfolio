@@ -27,7 +27,7 @@ export default function AboutMe({ targetRef, setStep }: IAboutMeProps) {
     const timer = setTimeout(() => {
       scrollBlocked = false;
       document.body.style.overflow = "";
-    }, 1000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
