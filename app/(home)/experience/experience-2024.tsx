@@ -31,7 +31,7 @@ export default function Experience2024({
     targetRef: experience2024Ref,
     changeStep: "experience",
     threshold: 0.3,
-    rootMargin: "60px 0px 60px 0px",
+    rootMargin: "0px 0px 60px 0px",
     setExperienceYear,
     experienceYear: 2024,
   });
