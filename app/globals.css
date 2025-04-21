@@ -72,6 +72,7 @@ html {
   --breakpoint-xs: 0px;
 }
 
+/* text stroke utilities */
 @layer utilities {
   .text-stroke-intro {
     -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
